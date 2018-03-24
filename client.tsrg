@@ -1,0 +1,39 @@
+aa net/minecraft/container/PlayerContainer
+    a craftMatrix
+    b craftResult
+    c isSinglePlayer
+ab net/minecraft/gui/SmallGuiButton
+    i enumOptions
+    a ()Lht; getEnumOptions
+ac net/minecraft/FullSnowBlock
+ad net/minecraft/json/exception/JsonSelectorMismatchException
+ae net/minecraft/particle/NoteParticle
+    a unknownParticleAttribute
+af net/minecraft/network/packet/PlayerPositionPacket
+ag net/minecraft/render/MobSpawnerRenderer
+    b entityHashMap
+    a (Lcy;DDDF)V renderMobSpawner
+ah net/minecraft/block/TntBlock
+ai net/minecraft/network/packet/MapDataPacket
+    a unknownA
+    b unknownB
+    c unknownC
+aj net/minecraft/sound/step/SandStepSound
+ak net/minecraft/block/PortalBlock
+    a_ (Lfd;III)Z createPortal
+al net/minecraft/sound/step/StoneStepSound
+am net/minecraft/world/generator/PerlinNoiseGenerator
+    a x
+    b y
+    c z
+    d permutations
+    a ([DDDDIIIDDDD)V unknownA
+    a (DDD)D generateNoise
+    a (DD)D unknownB
+    a (IDDD)D gradient
+    a (IDD)D unknownC
+    b (DDD)D lerp
+a net/minecraft/network/packet/UseEntityPacket
+    a playerId
+    b targetEntityId
+    c isLeftClick
