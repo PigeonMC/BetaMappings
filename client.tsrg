@@ -39,3 +39,4 @@ a net/minecraft/network/packet/UseEntityPacket
     c isLeftClick
 uu net/minecraft/block/Block
 s_mb net/minecraft/server/command/ICommandListener
+kg net/minecraft/FrozenThread
