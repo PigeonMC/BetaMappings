@@ -2,41 +2,454 @@ aa net/minecraft/container/PlayerContainer
     a craftMatrix
     b craftResult
     c isSinglePlayer
-ab net/minecraft/gui/SmallGuiButton
-    i enumOptions
-    a ()Lht; getEnumOptions
+ab net/minecraft/client/gui/SmallGuiButton
+    i options
+    a ()Lht; getOptions
 ac net/minecraft/FullSnowBlock
 ad net/minecraft/json/exception/JsonSelectorMismatchException
-ae net/minecraft/particle/NoteParticle
-    a unknownParticleAttribute
+ae net/minecraft/client/particle/NoteParticle
 af net/minecraft/network/packet/PlayerPositionPacket
-ag net/minecraft/render/MobSpawnerRenderer
-    b entityHashMap
+ag net/minecraft/client/render/MobSpawnerRenderer
+    b entities
     a (Lcy;DDDF)V renderMobSpawner
 ah net/minecraft/block/TntBlock
 ai net/minecraft/network/packet/MapDataPacket
-    a unknownA
-    b unknownB
-    c unknownC
-aj net/minecraft/sound/step/SandStepSound
+aj net/minecraft/client/sound/step/SandStepSound
 ak net/minecraft/block/PortalBlock
     a_ (Lfd;III)Z createPortal
-al net/minecraft/sound/step/StoneStepSound
+al net/minecraft/client/sound/step/StoneStepSound
 am net/minecraft/world/generator/PerlinNoiseGenerator
     a x
     b y
     c z
     d permutations
-    a ([DDDDIIIDDDD)V unknownA
     a (DDD)D generateNoise
-    a (DD)D unknownB
     a (IDDD)D gradient
-    a (IDD)D unknownC
     b (DDD)D lerp
 a net/minecraft/network/packet/UseEntityPacket
     a playerId
     b targetEntityId
     c isLeftClick
-uu net/minecraft/block/Block
-s_mb net/minecraft/server/command/ICommandListener
+an net/minecraft/json/JsonParser
+ao net/minercaft/json/JsonPathMismatchException
+ap net/minecraft/world/generator/TallGrassWorldGenerator
+aq net/minecraft/world/MaterialLogic
+ar net/minecraft/entity/WaterEntity
+as net/minecraft/util/CompressedStreamTools
+at net/minecraft/json/JsonNodeType
+au net/minecraft/item/Pickaxe
+av net/minecraft/item/CompassTexture
+aw net/minecraft/item/TickableTexture
+    a ()V tick
+ax net/minecraft/map/MapCoord
+ay net/minecraft/world/SkyWorldProvider
+az net/minecraft/block/tile/DispenserTileEntity
+    a contents
+    b random
+    b ()Liz; getRandomStackFromInventory()
+ba net/minecraft/json/LeafFunctor
+bb net/minecraft/client/render/ItemRenderer
+    f random
+    a (IIIIII)V renderTexturedQuad
+    a (Lhl;DDDFF)V renderItem
+    a (Lnw;IIIII)V renderQuad
+    a (Lsj;Lji;IIIII)V drawItemIntoGui
+    a (Lsj;Lji;Liz;II)V renderItemIntoGUI
+    b (Lsj;Lji;Liz;II)V renderItemOverlayIntoGUI
+bc net/minecraft/item/BucketItem
+    a isFull
+bd net/minecraft/client/CanvasIsomPreview
+be net/minecraft/world/generator/FlowerWorldGenerator
+    a plantBlockId
+bf net/minecraft/world/ChunkLoader
+    a (Lfd;II)Llm; loadChunk
+    a (Lfd;Llm;)V saveChunk
+    b (Lfd;Llm;)V saveExtraChunkData
+    b ()V saveExtraData
+bg net/minecraft/entity/AnimalEntity
+bh net/minecraft/client/sound/SoundPoolEntry
+    a soundName
+    b soundUrl
+bi net/minecraft/item/ClothItem
+bj net/minecraft/entity/SpawnListEntry
+    a entityClass
+    b spawnRarityRate
+bk net/minecraft/block/LeafBlock
+    a adjacentTreeBlocks
+    c baseIndexInPNG
+    a (Z)V setGraphicsLevel
+    h (Lfd;III)V removeLeaves
+bl net/minecraft/item/ShearsItem
+bm net/minercaft/container/FurnaceContainer
+    a furnace
+    b cookTime
+    c burnTime
+    h itemBurnTime
+b net/minecraft/achievement/AchievementMap
+bn net/minecraft/achievement/DistanceStatType
+bo net/minecraft/achievement/TimeStatType
+bp net/minecraft/entity/GhastEntity
+    a courseChangeCooldown
+    b waypointX
+    c waypointY
+    d waypointZ
+    e prevAttackCounter
+    f attackCounter
+    g targetedEntity
+    h aggroCooldown
+    a (DDDD)Z isCourseTraversable
+bq net/minecraft/achievement/SimpleStatType
+br net/minecraft/world/ChunkCoordinates
+    a x
+    b y
+    c z
+    a (III)D getSqDistanceTo
+    a (Lbr;)I compareChunkCoordinate
+bs net/minecraft/block/RedstoneOreBlock
+bt net/minecraft/util/Vec3D
+    a x
+    b y
+    c z
+    d vectorList
+    e nextVector
+    a (DDD)Lbt; createVectorHelper
+    a (F)V rotateAroundX
+    a (Lbt;D)Lbt; getIntermediateWithXValue
+    a (Lbt;)Lbt; subtract
+    b (DDD)Lbt; createVector
+    b (F)V rotateAroundY
+    b (Lbt;D)Lbt; getIntermediateWithYValue
+    b (Lbt;)Lbt; crossProduct
+    b ()V initialize
+    c (DDD)Lbt; addVector
+    c (Lbt;D)Lbt; getIntermediateWithZValue
+    c (Lbt;)D distanceTo
+    c ()Lbt; normalize
+    d (DDD)D squareDistanceTo
+    d (D lengthVector
+    d (Lbt;)D squareDistanceTo
+    e (DDD)Lbt; setComponents
+bu net/minecraft/item/ToolMaterial
+    a WOOD
+    b STONE
+    c IRON
+    d EMERALD
+    e GOLD
+    f harvestLevel
+    g maxUses
+    h efficiency
+    i damage
+    a ()I getMaxUses
+    b ()F getEfficiencyOnProperMaterial
+    c ()I getDamageVsEntity
+    d ()I getHarvestLevel
+bv net/minecraft/block/PressurePlateBlock
+bw net/minecraft/client/render/Renderer
+    a modelBase
+    b renderManager
+    c shadowSize
+    e renderBlocks
+    a (Leq;DDD)V renderOffsetAABB
+    a (Leq;)V renderAABB
+    a (Ljava/lang/String;Ljava/lang/String;)Z loadDownloadableImageTexture
+    a (Ljava/lang/String;)V loadTexture
+    a ()Lsj; getFontRendererFromRenderManager
+    a (Lsn;DDDFF)V render
+    a (Lsn;DDDF)V renderEntityOnFire
+    a (Lth;)V setRenderManager
+    a (Luu;DDDIIIFFDDD)V renderShadowOnBlock
+    b ()Lfd; getWorldFromRenderManager
+    b (Lsn;DDDFF)V doRenderShadowAndFire
+    c (Lsn;DDDFF)V renderShadow
+bx net/minecraft/entity/CowEntity
+by net/minecraft/entity/SnowballEntity
+bz net/minecraft/item/SoupItem
+ca net/minecraft/network/packet/BedPacket
+cb net/minecraft/client/PanelCrashReport
+cc net/minecraft/world/generator/NoiseGenerator2
+    a (D)I wrap
+cd net/minecraft/container/ChestContainer
+ce net/minecraft/client/gui/UnusedGui
+    a messageA
+    i messageB
+cf net/minecraft/entity/FireballEntity
+cg net/minecraft/client/particle/LavaParticle
+ch net/minecraft/client/gui/GameOverGui
+ci net/minecraft/client/gui/ItemStatSlotGui
+cj net/minecraft/achievement/StatsSyncher
+    b (Ljava/util/Map;)V syncStatsFile
+ck net/minecraft/item/ItemBlock
+    a blockId
+cl net/minecraft/world/ChunkProvider
+    a (II)Z chunkExists
+    a (Lcl;II)V populate
+    a (ZLyb;)Z saveChunks
+    a ()Z unloadOldChunks
+    b (II)Llm; provideChunk
+    b ()Z canSave
+    c (II)Llm; prepareChunk
+    c ()Ljava/lang/String; toString
+cm net/minecraft/world/ChunkFolderPattern
+c net/minecraft/entity/LightningBoltEntity
+cn net/minecraft/entity/SpiderEntity
+co net/minecraft/client/gui/OptionsGui
+    a screenTitle
+    i parentScreen
+    j options
+cp net/minecraft/item/MapItem
+cq net/minecraft/world/AnimalSpawner
+    a nightEntities
+    b eligibleChunks
+    a (Lfd;II)Lwf; getRandomSpawningPoint
+    a (Lfd;Ljava/util/List;)Z sleepingSpawn
+    a (Lfd;ZZ)I spawn
+    a (Llk;Lfd;III)Z canCreatureSpawnAtLocation
+    a (Lls;Lfd;FFF)V creatureInit
+cr net/minecraft/client/particle/BubbleParticle
+cs net/minecraft/item/FishingRodItem
+ct net/minecraft/client/sound/StepSound
+    a ()Ljava/lang/String; stepSoundDir
+    b ()F getVolume
+    c ()F getPitch
+cu net/minecraft/client/control/MouseFilter
+cv net/minecraft/client/render/BlockRenderer
+    a fancyGrass
+    c blockAcceess
+    d overrideBlockTexture
+    e flipTexture
+    f renderAllFaces
+    m enableAO
+    n lightValue
+    o xNegLightValueAO
+    p yNegLightValueAO
+    q zNegLightValueAO
+    r xPosLightValueAO
+    s yPosLightValueAO
+    t zPosLightValueAO
+cw net/minecraft/Status
+    a OK
+    b NOT_POSSIBLE_HERE
+    c NOT_POSSIBLE_NOW
+    d TOO_FAR_AWAY
+    e OTHER_PROBLEM
+cx net/minecraft/client/render/OpenGlCapsChecker
+    a tryCheckOcclusionCapable
+    a ()Z checkARBOcclusion
+cy net/minecraft/block/tileentity/MobSpawnerTileEntity
+    a delay
+    b yaw
+    c pitch
+    i entityId
+    a ()Ljava/lang/String; getEntityId
+    a (Ljava/lang/String;)V setEntityId
+    b ()Z isPlayerInRange
+    d ()V updateDelay
+cz net/minecraft/DownloadResourcesThread
+    a resourcesFolder
+    b minecraft
+    c closing
+    a (Ljava/io/File;Ljava/lang/String;)V loadResource
+    a (Ljava/net/URL;Ljava/io/File;J)V downloadResource
+    a (Ljava/net/URL;Ljava/lang/String;JI)V downloadAndInstallResource
+    a ()V reloadResources
+    b ()V closeMinecraft
+da net/minecraft/client/gui/ScreenGui
+    a selectedButton
+    b minecraft
+    c width
+    d height
+    e controlList
+    g fontRenderer
+    a (CI)V keyType
+    a (IIF)V drawScreen
+    a (III)V mouseClicked
+    a (I)V drawWorldBackground
+    a (Lke;)V actionPerformed
+    a (Lnet/minecraft/client/Minecraft;II)V setWorldAndResolution
+    a ()V updateScreen
+    a (ZI)V deleteWorld
+    b (III)V mouseMovedOrUp
+    b (I)V drawBackground
+    b ()V initGui
+    c ()Z doesGuiPauseGame
+    d ()Ljava/lang/String; getClipboardString
+    e ()V handleInput
+    f ()V handleMouseInput
+    g ()V handleKeyboardInput
+    h ()V onGuiClosed
+    i ()V drawDefaultBackground
+    j ()V selectNextField
+db net/minecraft/block/RedstoneTorchBlock
+    a torchActive
+    b torchUpdates
+    a (Lfd;IIIZ)Z checkForBurnout
+dc net/minecraft/entity/SinglePlayerEntity
+    a movementInput
+    b minecraft
+    a (IZ)V handleKeyPress
+    a (Ljava/lang/String;)V sendChatMessage
+    d (III)Z isBlockTranslucent
+    d_ (I)V setHealth
+    o_ ()V resetPlayerKeyState
+    s ()I getPlayerArmorValue
+dd net/minecraft/block/MobSpawnerBlock
+de net/minecraft/client/gui/TexturePackSlotGui
+    a parentTexturePackGui
+df net/minecraft/world/generator/NoiseGenerator
+dg net/minecraft/client/render/SnowballRenderer
+    a itemIndex
+dh net/minecraft/entity/pathfinding/EntityPath
+    a length
+    b points
+    c index
+    a (Lsn;)Lbt; getPosition
+    a ()V incrementIndex
+    b ()Z isFinished
+di net/minecraft/network/packet/CollectPacket
+    a collectedEntityId
+    b collectorEntityId
+dj net/minecraft/world/generator/LakeGenerator
+dk net/minecraft/client/render/WorldRenderer
+    A isChunkLit
+    a worldObj
+    b chunksUpdated
+    B tileEntityRenderers
+    C glRenderList
+    c x
+    d y
+    e z
+    D tessellator
+    E isInitialized
+    f sizeWidth
+    F tileEntities
+    g sizeHeight
+    h sizeDepth
+    i posXMinus
+    j posYMinus
+    k posZMinus
+    l posXClip
+    m posYClip
+    n posZClip
+    o isInFrustum
+    p skipRenderPass
+    q posXPlus
+    r posYPlus
+    s posZPlus
+    t rendererRadius
+    u needsUpdate
+    v rendererBoundingBox
+    w chunkIndex
+    x isVisible
+    y isWaitingOnOcclusionQuery
+    z glOcclusionQuery
+    a (III)V setPosition
+    a (I)I getGLCallListForPass
+    a (Lsn;)F distanceToEntitySquared
+    a (Lyn;)V updateInFrustrum
+    a ()V updateRenderer
+    b ()V setDontDraw
+    d ()V callOcclusionQueryList
+    e ()Z skipAllRenderPasses
+    f ()V markDirty
+    g ()V setupGLTranslation
+dl net/minecraft/entity/SheepEntity
+    a woolColorTable
+    a (Ljava/util/Random;)I getRandomWoolColor
+    a (Z)V setSheared
+    e_ (I)V setWoolColor
+    r ()I getWoolColor
+    s ()Z isSheared
+dm net/minecraft/item/SnowBallItem
+d net/minecraft/entity/pathfinding/PathPoint
+    a x
+    b y
+    c z
+    d index
+    e totalPathDistance
+    f distanceToNext
+    g distanceToTarget
+    h previous
+    i isFirst
+    j hash
+    a (Ld;)F distanceTo
+    a ()Z isAssigned
+dn net/minecraft/client/renderer/ParticleRenderer
+    a world
+    b particleLayers
+    c renderer
+    d random
+    a (IIIII)V addBlockDestroyEffects
+    a (IIII)V addBlockHitEffects
+    a (Lfd;)V clearEffects
+    a (Lsn;F)V renderParticles
+    a (Lxw;)V addEffect
+    a ()V updateEffects
+    b ()Ljava/lang/String; getStatistics
+do net/minecraft/achievement/StatCollector
+    a localizedName
+    a (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String; translateToLocalFormatted
+    a (Ljava/lang/String;)Ljava/lang/String; translateToLocal
+dp net/minecraft/block/LadderBlock
+dq net/minecraft/item/Tool
+    a material
+    bk blocksEffectiveAgainst
+    bl efficiency
+    bm damage
+dr net/minecraft/client/render/ClippingHelper
+    a frustum
+    b projectionMatrix
+    c modelviewMatrix
+    d clippingMatrix
+    a (DDDDDD)Z isBoxInFrustum
+ds net/minecraft/client/renderer/PlayerRenderer
+    a bipedModel
+    g chestplateModel
+    h armorModel
+    i armorFilenamePrefix
+    a (Lgs;DDDFF)V renderPlayer
+    a (Lgs;DDD)V renderName
+    a (Lgs;F)V renderSpecials
+    a (Lgs;IF)Z setArmorModel
+    b ()V drawFirstPersonHand
+dt net/minecraft/crafting/Recipe
+    a ()I getRecipeSize
+    a (Lmq;)Z matches
+    b ()Liz; getRecipeOutput
+    b (Lmq;)Liz; getCraftingResult
+au net/minecraft/client/gui/ParticleGui
+dv net/minecraft/client/gui/StatsGui
+dw net/minecraft/container/Container
+    e slots
+    f windowId
+    a (I)Liz; getStackInSlot
+    a (ILiz;)V putStackInSlot
+    a (Lgp;)V addSlot
+    a (Lgs;)V onCraftGuiClosed
+    a ([Liz;)V putStacksInSlots
+    a (Llw;)V onCraftMatrixChanged
+    a ()V updateCraftingResults
+    b (I)Lgp; getSlot
+    b (Lgs;)Z isUsableByPlayer
+dx net/minecraft/unknown/MapColor
+    a mapColorArray
+    b airColor
+    c grassColor
+    d sandColor
+    e clothColor
+    f tntColor
+    g iceColor
+    h ironColor
+    i leafColor
+    j snowColor
+    k clayColor
+    l dirtColor
+    m stoneColor
+    n waterColor
+    o woodColor
+    p colorValue
+    q colorIndex
+dy net/minecraft/client/render/PaintingRenderer
+dz net/minecraft/world/ChunkFile
 kg net/minecraft/FrozenThread
+uu net/minecraft/block/Block
+s_mb net/minecraft/server/command/CommandListener
