@@ -416,7 +416,7 @@ dt net/minecraft/crafting/Recipe
     a (Lmq;)Z matches
     b ()Liz; getRecipeOutput
     b (Lmq;)Liz; getCraftingResult
-au net/minecraft/client/gui/ParticleGui
+du net/minecraft/client/gui/ParticleGui
 dv net/minecraft/client/gui/StatsGui
 dw net/minecraft/container/Container
     e slots
