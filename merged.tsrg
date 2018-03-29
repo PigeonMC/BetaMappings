@@ -1,3 +1,6 @@
+#
+# Beta 1.7.3 Mappings
+#
 aa net/minecraft/container/PlayerContainer
     a craftMatrix
     b craftResult
@@ -430,7 +433,7 @@ dw net/minecraft/container/Container
     a ()V updateCraftingResults
     b (I)Lgp; getSlot
     b (Lgs;)Z isUsableByPlayer
-dx net/minecraft/unknown/MapColor
+dx net/minecraft/world/MapColor
     a mapColorArray
     b airColor
     c grassColor
@@ -855,7 +858,7 @@ gc net/minecraft/client/gui/ChatGui
     a message
     i updates
 gd net/minecraft/world/generator/GlowstoneGenerator1
-ge net/minecraft/client/GLAllocation
+ge net/minecraft/client/render/GLAllocation
     a displayLists
     b textureNames
     a (I)I generateDisplayLists
@@ -1065,7 +1068,7 @@ gp net/minecraft/inventory/Slot
     d ()I getSlotStackLimit
     e ()I getBackgroundIconIndex
 gq net/minecraft/client/gui/DispenserGui
-gr net/minecraft/client/Session
+gr net/minecraft/client/session/Session
     a registeredBlocksList
     b username
     c sessionId
@@ -1726,7 +1729,7 @@ ko net/minecraft/client/render/model/BaseModel
     a (FFFFFF)V render
     a (Lls;FFF)V setLivingAnimations
     b (FFFFFF)V setRotationAngles
-kp net/minecraft/client/PremiumChecker
+kp net/minecraft/client/session/PremiumChecker
 kq net/minecraft/client/MinecraftImpl
     a frame
 kr net/minecraft/json/JsonObject
@@ -2137,7 +2140,7 @@ mk net/minecraft/client/gui/LoadingScreenGui
     b minecraft
     a (Ljava/lang/String;)V printText
 ml net/minecraft/json/JsonFormatter
-mm net/minecraft/client/ClientWorld
+mm net/minecraft/client/world/ClientWorld
     D sendQueue
     a (IIZ)V doPreChunk
     c (I)Lsn; removeEntityFromWorld
@@ -2403,7 +2406,7 @@ nz net/minecraft/network/packet/LoginPacket
     c mapSeed
     d dimension
 oa net/minecraft/block/SoulSandBlock
-ob net/minecraft/PlayerController
+ob net/minecraft/client/entity/PlayerController
     a minecraft
     a (F)V setPartialTime
     a (IIII)V clickBlock
@@ -2472,7 +2475,7 @@ oq net/minecraft/block/TrapDoorBlock
     d (I)V setBlockBoundsForBlockRender
     e (I)Z isTrapdoorOpen
 or net/minecraft/block/CactusBlock
-os net/minecraft/client/PlayerControllerSP
+os net/minecraft/client/entity/PlayerControllerSP
     f currentBlockDamage
     g previousBlockDamage
     i blockHitWait
@@ -2661,7 +2664,8 @@ py net/minecraft/world/Timer
     j timeSyncAdjustment
     a ()V updateTimer
 pz net/minecraft/network/packet/RelativeEntityPositionRotationPacket
-qa net/minecraft/client/KeyBinding
+qa net/minecraft/json/JsonStringNode
+qb net/minecraft/client/control/KeyBinding
     a keyDescription
     b keyCode
 qc net/minecraft/world/generator/NetherLavaGenerator
@@ -2785,7 +2789,7 @@ rg net/minecraft/network/packet/EntityTeleportPacket
     e yaw
     f pitch
 rh net/minecraft/world/SurfaceProvider
-ri net/mineraft/block/SugarcaneBlock
+ri net/minecraft/block/SugarcaneBlock
     h (Lfd;III)V checkBlockCoordValid
 rj net/minecraft/world/RegionFileCache
     a cache
@@ -3113,7 +3117,7 @@ ss net/minecraft/block/StairBlock
     a model
 st net/minecraft/world/chunk/ChunkBlockMetadata
 su net/minecraft/client/gui/GeneralSlotStatGui
-sv net/minceraft/network/packet/RelativeEntityPositionPacket
+sv net/minecraft/network/packet/RelativeEntityPositionPacket
 sw net/minecraft/client/ChatLine
     a message
     b updates
@@ -3200,7 +3204,7 @@ tj net/minecraft/util/ImageDownloaderThread
     a location
     b buffer
     c imageData
-tk net/minecraft/client/ClientPlayerEntityMP
+tk net/minecraft/client/entity/ClientPlayerEntity
     bN sendQueue
     bQ oldPosX
     bS oldPosY
@@ -3237,7 +3241,7 @@ tt net/minecraft/crafting/ShapelessRecipe
 # synthetic class
 tu net/minecraft/util/OsMap
     a map
-tv net/miencraft/network/packet/BlockChangePacket
+tv net/minecraft/network/packet/BlockChangePacket
     a x
     b y
     c z
@@ -3311,7 +3315,7 @@ u net/minecraft/client/render/RenderHelper
     a ()V disableStandardItemLighting
     b ()V enableStandardItemLighting
 un net/minecraft/client/render/TerrainTextureManager
-uo net/minecraft/client/MovementInput
+uo net/minecraft/client/control/MovementInput
     a moveStrafe
     b moveForward
     d jump
@@ -3638,7 +3642,7 @@ vt net/minecraft/network/packet/PaintingEntityPacket
     d z
     e direction
     f title
-vu net/minecraft/unknown/GuiAchievement
+vu net/minecraft/client/gui/AchievementGui
     a minecraft
     b achievementWindowWidth
     c achievementWindowHeight
@@ -3662,7 +3666,7 @@ vx net/minecraft/client/gui/ConnectingGui
     a (Lvx;Lnb;)Lnb; setNetClientHandler
     a (Lvx;)Z isCancelled
     b (Lvx;)Lnb; getNetClientHandler
-vy net/minecraft/client/MouseHelper
+vy net/minecraft/client/control/MouseHelper
     a deltaX
     b deltaY
     d cursor
@@ -3700,7 +3704,7 @@ wi net/minecraft/util/NibbleArray
     a (III)I getNibble
     a (IIII)V setNibble
     a ()Z isValid
-wj net/minecraft/client/PistonBlockTextures
+wj net/minecraft/client/render/PistonBlockTextures
 wk net/minecraft/achievement/StatType
 wl net/minecraft/crafting/InventoryCraftResult
     a result
@@ -3751,8 +3755,224 @@ wz net/minecraft/client/ConnectToServerThread
     b hostName
     c port
     d connectingGui
+xa net/minecraft/world/WorldProvider
+    a world
+    b chunkManager
+    c isNether
+    d isNetherWorld
+    e hasNoSky
+    f lightBrightnessTable
+    g worldType
+    h colorsSunriseSunset
+    a (FF)[F calcSunriseSunsetColors
+    a (II)Z canCoordinateBeSpawn
+    a (I)Lxa; getProviderForDimension
+    a (JF)F calculateCelestialAngle
+    a (Lfd;)V registerWorld
+    a ()V registerWorldChunkManager
+    b ()Lcl; getChunkProvider
+    d ()F getCloudHeight
+    e ()V generateLightBrightnessTable
+    f ()Z canRespawnHere
+xb net/minecraft/nbt/NBTTagString
+    a stringValue
+xc net/minecraft/crafting/WeaponRecipes
+    a recipePatterns
+    b recipeItems
+    a (Lhk;)V addRecipes
+xd net/minecraft/client/particle/RainParticle
+xe net/minecraft/json/exception/JsonInvalidSyntaxException
+xf net/minecraft/block/SpongeBlock
+xg net/minecraft/network/NetworkMasterThread
+    a networkManager
+xh net/minecraft/util/CloseConnectionThread
+xi net/minecraft/achievement/StatFileWriter
+    d statsSyncher
+    a (Ljava/util/Map;Lvr;I)V writeStatToMap
+    a (Lny;)Z hasAchievementUnlocked
+    a (Lvr;)I writeStat
+    a (Lvr;I)V readStat
+    c ()V syncStats
+xj net/minecraft/network/NetworkReaderThread
+    a networkManager
+xk net/minecraft/client/entity/PlayerControllerMP
+    c currentBlockX
+    d currentBlockY
+    e currentblockZ
+    f currentBlockDamageMP
+    g previousBlockDamageMP
+    i blockHitDelay
+    j isHittingBlock
+    k netClientHandler
+    l currentPlayerItem
+    e ()V syncCurrentPlayItem
+xl net/minecraft/network/NetworkWriterThread
+    a netManager
+xm net/minecraft/client/gui/AchievementsGui
+x net/minecraft/client/gui/ErrorScreenGui
+xn net/minecraft/client/particle/SmokeParticle
+xo net/minecraft/world/generator/LiquidGenerator
+    a liquidBlockId
+xp net/minecraft/world/BlockAccess
+    a (IIII)F getBrightness
+    a (III)I getBlockId
+    a ()Lxv; getWorldChunkManager
+    b (III)Low; getBlockTileEntity
+    c (III)F getLightBrightness
+    e (III)I getBlockMetadata
+    f (III)Lln; getBlockMaterial
+    g (III)Z isBlockOpaqueCube
+    h (III)Z isBlockNormalCube
+xq net/minecraft/block/DispenserBlock
+    a random
+    c (Lfd;IIILjava/util/Random;)V dispenseItem
+    h (Lfd;III)V setDispenserDefaultDirection
+xr net/minecraft/block/LeverBlock
+    h (Lfd;III)Z checkIfAttachedToBlock
+xs net/minecraft/world/generator/FireGenerator
+xt net/minecraft/entity/SquidEntity
+    k randomMotionSpeed
+    n randomMotionVecX
+    o randomMotionVecY
+    p randomMotionVecZ
+xu net/minecraft/world/RedstoneUpdateInfo
+    a x
+    b y
+    c z
+    d updateTime
+xv net/minecraft/world/WorldChunkManager
+    a temperature
+    b humidity
+    a ([DIIII)[D getTemperatures
+    a (II)Lkd; getBiomeGenAt
+    a ([Lkd;IIII)[Lkd; loadBlockGeneratorData
+    a (Lyy;)Lkd; getBiomeGenAtChunkCoord
+    b (II)D getTemperature
+xw net/minecraft/client/particle/AbstractParticle
+    b textureIndex
+    c textureJitterX
+    d textureJitterY
+    e age
+    f maxAge
+    g scale
+    h gravity
+    i red
+    j green
+    k blue
+    l x
+    m y
+    n z
+    a (Lnw;FFFFFF)V renderParticle
+    c_ ()I getParticleLayer
+xx net/minecraft/util/MinecraftError
+xy net/minecraft/client/render/SheepRenderer
+    a (Ldl;IF)Z setWoolColorAndRender
+xz net/minecraft/client/entity/PlayerEntityOtherMP
+ya net/minecraft/entity/PigZombieEntity
+    a angerLevel
+    b randomSoundDelay
+    f defaultHeldItem
+    d (Lsn;)V becomeAngryAt
+yb net/minecraft/client/gui/ProgressUpdate
+    a (I)V setLoadingProgress
+    d (Ljava/lang/String;)V displayLoadingString
+yc net/minecraft/client/gui/EditSignGui
+    a screenTitle
+    i entitySign
+    j updateCounter
+    l editLine
+    m allowedCharacters
+yd net/minecraft/achievement/Stat
+ye net/minecraft/item/FlintAndSteelItem
+yf net/minecraft/world/chunk/ChunkGeneratorProvider
+    c mobSpawnerNoise
+    j random
+    p world
+    r sandNoise
+    s gravelNoise
+    t stoneNoise
+    v biomesForGeneration
+    w generatedTemperatures
+    a (II[B[Lkd;[D)V generateTerrain
+    a (II[B[Lkd;)V replaceBlocksForBiome
+yg net/minecraft/client/render/GiantZombieRenderer
+    a scale
+    a (Lnt;F)V preRenderScale
+yh net/minecraft/world/generator/TreeGenerator
+yi net/minecraft/block/NetherrackBlock
+yj net/minecraft/world/generator/RainforestBiomeGenerator
 yk net/minecraft/block/tileentity/SignTileEntity
-s_mb net/minecraft/server/command/CommandListener
+    a signText
+    b lineBeingEdited
+yl net/minecraft/entity/MinecartEntity
+    a minecartCurrentDamage
+    b minecartTimeSinceHit
+    c minecartRockDirection
+    d minecartType
+    e fuel
+    f pushX
+    g pushZ
+    h cargoItems
+ym net/minecraft/item/PaintingItem
+y net/minecraft/json/JsonNodeList
+yn net/minecraft/client/AbstractCamera
+    a (DDD)V setPosition
+    a (Leq;)Z isBoundingBoxInFrustum
+yo net/minecraft/client/sound/SoundManager
+    a sndSystem
+    b soundPoolSounds
+    c soundPoolStreaming
+    d soundPoolMusic
+    f options
+    g loaded
+    h rand
+    i ticksBeforeMusic
+    a (Ljava/lang/String;FFFFF)V playStreaming
+    a (Ljava/lang/String;FF)V playSoundFX
+    a (Ljava/lang/String;Ljava/io/File;)V addSound
+    a (Lkv;)V loadSoundSettings
+    a ()V onSoundOptionsChanged
+    b (Ljava/lang/String;FFFFF)V playSound
+    b (Ljava/lang/String;Ljava/io/File;)V addStreaming
+    b ()V closeMinecraft
+    c (Ljava/lang/String;Ljava/io/File;)V addMusic
+    c ()V playRandomMusicIfReady
+    d ()V tryToSetLibraryAndCodecs
+yp net/minecraft/json/Functor
+yq net/minecraft/block/FireBlock
+    a chanceToEncourageFire
+    b abilityToCatchFire
+    a (III)V setBurnRate
+    a (Lfd;IIIILjava/util/Random;I)V tryToCatchBlockOnFire
+    c (Lxp;III)Z canBlockCatchFire
+    f (Lfd;IIII)I getChanceToEncourageFire
+    i (Lfd;III)I getChanceOfNeighborsEncouragingFire
+yr net/minecraft/network/packet/KickDisconnectPacket
+    a reason
+ys net/minecraft/block/SlabBlock
+    a blockType
+yt net/minecraft/json/JsonEscapedString
+# no clue what this is
+yu net/minecraft/entity/WeatherEffectEntity
+yv net/minecraft/crafting/CraftingSlot
+    d craftMatrix
+    e player
+yw net/minecraft/item/FoodItem
+    a healAmount
+    bk isWolfsFavoriteMeat
+    l ()I getHealAmount
+    m ()Z getIsWolfsFavoriteMeat
+yx net/minecraft/client/render/SpiderRenderer
+    a (Lcn;)F setSpiderDeathMaxRotation
+    a (Lcn;IF)Z setSpiderEyeBrightness
+yy net/minecraft/world/chunk/ChunkCoord
+    a x
+    b z
+    a (II)I chunkCoordToInt
+z net/minecraft/crafting/ArmorRecipes
+    a recipePatterns
+    b recipeItems
+    a (Lhk;)V addRecipes
 net/minecraft/client/Minecraft net/minecraft/client/MinecraftClient
     aa saveLoader
     ab serverName
@@ -3859,3 +4079,186 @@ net/minecraft/client/MinecraftApplet net/minecraft/client/MinecraftApplet
     a ()V startMainThread
     b ()V shutdown
     c ()V clearApplet
+
+# Server Only Classes
+s_af net/minecraft/server/command/ServerCommand
+    a command
+    b commandListener
+s_bq net/minecraft/server/ServerApplicationThread
+    a server
+s_br net/minecraft/server/ConvertProgressUpdater
+    a server
+    b lastTimeMillis
+s_bs net/minecraft/server/command/CommandReaderThread
+    a server
+s_ci net/minecraft/server/gui/GuiLogOutputHandler
+s_cu net/minecraft/server/network/NetworkListenThread
+    a logger
+    c server
+    d serverSocket
+    e networkAcceptThread
+    g pendingConnections
+    h playerList
+s_cv net/minecraft/server/LoginVerifierThread
+    a loginPacket
+    b loginHandler
+s_dg net/minecraft/server/entity/UpdatePlayerListBox
+s_dl net/minecraft/server/entity/PlayerEntityMP
+    a playerNetServerHandler
+    b server
+    c itemEntityManager
+    f loadedChunks
+    bL lastHealth
+    bM ticksOfInvulnerability
+    bN playerInventory
+    bO currentWindowId
+    h isChangingQuantityOnly
+s_dm net/minecraft/server/world/WorldManager
+    a server
+s_dp net/minecraft/server/world/ServerWorld
+    C serverChunkProvider
+    E levelSaving
+    F server
+    G mcHash
+s_dq net/minecraft/server/entity/PlayerNBTManager
+    a logger
+    b worldDir
+    c worldFile
+s_dx net/minecraft/server/entity/PlayerHash
+    a hashes
+    b hashCount
+    c capacity
+    d percentUsable
+s_ee net/minecraft/server/network/ServerLoginHandler
+    a logger
+    b networkManager
+    c isDoneProcessing
+    d random
+    e server
+    f loginTimer
+    g username
+    h loginPacket
+    i serverId
+s_eg net/minecraft/server/world/WorldServerMP
+s_ev net/minecraft/server/gui/ConsoleLogManager
+    a logger
+s_fc net/minecraft/server/ServerConfigurationManager
+    a logger
+    b players
+    c server
+    d playerManager
+    e maxPlayers
+    f bannedPlayers
+    g bannedIps
+    h ops
+    i whiteListedIps
+    j bannedPlayersFile
+    k ipBanFile
+    l opFile
+    m whitelistPlayersFile
+    n playerNBTManager
+    o whiteListEnforced
+s_ff net/minecraft/server/entity/EntityTrackerEntry
+    a trackedEntity
+    b trackedDistanceThreshold
+    d encodedX
+    e encodedY
+    f encodedZ
+    g encodedYaw
+    h encodedPitch
+    i lastTrackedEntityMotionX
+    j lastTrackedEntityMotionY
+    k lastTrackedEntityMotionZ
+    l updates
+    o lastTrackedEntityPosX
+    p lastTrackedEntityPosY
+    q lastTrackedEntityPosZ
+    r firstUpdateDone
+    s shouldSendMotionUpdates
+    m playerEntitiesUpdated
+    n trackedPlayers
+s_fi net/minecraft/server/gui/GuiLogFormatter
+    a outputHandler
+s_fl net/minecraft/server/entity/AbstractPlayerFileData
+s_gy net/minecraft/server/gui/StatGuiComponent
+    a memoryUse
+    b updates
+    c displayString
+s_ha net/minecraft/server/network/ServerNetHandler
+    a logger
+    b networkManager
+    c isConnectionClosed
+    d server
+    e playerEntity
+    h playerAirTime
+    j lastX
+    k lastY
+    l lastZ
+    m hasMoved
+s_he net/minecraft/server/world/RegionFileCache
+    a chunkLoadOverride
+    c dummyChunk
+    d serverChunkGenerator
+    f idToChunkMap
+    h world
+s_hm net/minecraft/server/gui/StatGuiListener
+    a statsComponent
+s_i net/minecraft/server/entity/PlayerListBox
+    a server
+    b updates
+s_kd net/minecraft/server/entity/PlayerHashEntry
+    a key
+    b value
+    c nextEntry
+s_ky net/minecraft/server/PropertyManager
+    a logger
+    b serverProperties
+    c serverPropertiesFile
+s_ld net/minecraft/server/network/NetworkAcceptThread
+    a server
+s_mb net/minecraft/server/command/CommandListener
+s_mc net/minecraft/server/command/ConsoleCommandHandler
+    a logger
+    b server
+s_nf net/minecraft/server/gui/ServerGui
+    a logger
+    b server
+s_nl net/minecraft/server/entity/EntityTracker
+    a trackedEntiies
+    b trackedEntitiesHashTable
+    c server
+    d maxTrackingDistanceThreshold
+s_oh net/minecraft/server/gui/ConsoleLogFormatter
+    a dateFormat
+s_oo net/minecraft/server/entity/PlayerManager
+    a players
+    b playerInstances
+    c playerInstancesToUpdate
+    d server
+    f playerViewRadius
+s_ox net/minecraft/server/MonitorConnectionThread
+    a networkManager
+s_pu net/minecraft/server/ItemEntityManager
+    b world
+    a player
+s_q net/minecraft/server/gui/ServerWindowAdapter
+    a server
+s_r net/minecraft/server/gui/ServerGuiCommandListener
+    a textField
+    b serverGui
+s_s net/minecraft/server/gui/ServerGuiFocusAdapter
+    a serverGui
+s_u net/minecraft/unknown/EmptyAnimal
+s_y net/minecraft/server/entity/PlayerInstance
+    b players
+    c chunkX
+    d chunkZ
+    e currentChunk
+    f blocksToUpdate
+    g blocksToUpdateCount
+    h minX
+    i maxX
+    j minY
+    k maxY
+    l minZ
+    m maxZ
