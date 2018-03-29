@@ -1736,7 +1736,7 @@ ku net/minecraft/item/WatchEffect
     g minecraft
     h watchIconImageData
     i dialImageData
-kv net/minecraft/settings/GameSettings
+kv net/minecraft/client/settings/GameSettings
     a musicVolume
     A thirdPersonView
     B showDebugInfo
@@ -1805,5 +1805,294 @@ ky net/minecraft/crafting/RecipeSorter
     a (Ldt;Ldt;)I compareRecipes
 # synthetic class
 kz net/minecraft/json/NodeTypeMappingHelper
+la net/minecraft/item/HoeItem
+lc net/minecraft/client/render/model/SkeletonModel
+ld net/minecraft/world/McRegionChunkLoader
+    a worldDir
+le net/minecraft/block/DoorBlock
+    a (Lfd;IIIZ)V onPoweredBlockChange
+    d (I)V setDoorRotation
+    e (I)I getState
+    f (I)Z isOpen
+lf net/minecraft/entity/pathfinding/Path
+    a pathPoints
+    b count
+    a (I)V sortBack
+    a (Ld;F)V changeDistance
+    a (Ld;)Ld; addPoint
+    a ()V clearPath
+    b (I)V sortForward
+    b ()Ld; dequeue
+    c ()Z isPathEmpty
+lg net/minecraft/client/gui/GuiSlot
+    a minecraft
+    b width
+    c height
+    d right
+    e left
+    f scrollUpButtonID
+    g scrollDownButtonID
+    h top
+    i bottom
+    j posZ
+    k initialClickY
+    l scrollMultiplier
+    m amountScrolled
+    n selectedElement
+    o lastClicked
+    a (IIF)V drawScreen
+    a (IIIILnw;)V drawSlot
+    a (IIII)V overlayBackground
+    a ()I getSize
+    a (IZ)V elementClicked
+    a (Ljava/util/List;II)V registerScrollButtons
+    a (Lke;)V actionPerformed
+    b ()I getContentHeight
+    c_ (I)Z isSelected
+    c ()V drawBackground
+    d ()V bindAmountScrolled
+lh net/minecraft/nbt/NBTTagEnd
+li net/minecraft/world/EmptyChunk
+lj net/minecraft/json/PositionTrackingPushbackReader
+lk net/minecraft/entity/CreatureType
+    a MONSTER
+    b ANIMAL
+    c WATER_CREATURE
+    d creatureClass
+    e maxNumberOfCreatures
+    f creatureMaterial
+    g isPeacefulCreature
+    a ()Ljava/lang/Class; getCreatureClass
+    b ()I getMaxNumberOfCreature
+    c ()Lln; getCreatureMaterial
+    d ()Z getPeacefulCreature
+ll net/minecraft/client/render/TileEntityRenderer
+    a instance
+    b staticPlayerX
+    c staticPlayerY
+    d staticPlayerZ
+    e renderEngine
+    f worldObj
+    g entityLivingPlayer
+    h playerYaw
+    i playerPitch
+    j playerX
+    k playerY
+    l playerZ
+    m specialRendererMap
+    n fontRenderer
+    a (Lfd;Lji;Lsj;Lls;F)V cacheActiveRenderInfo
+    a (Lfd;)V func_31072_a
+    a (Ljava/lang/Class;)Lje; getSpecialRendererForClass
+    a (Low;DDDF)V renderTileEntityAt
+    a (Low;F)V renderTileEntity
+    a (Low;)Z hasSpecialRenderer
+    a ()Lsj; getFontRenderer
+    b (Low;)Lje; getSpecialRendererForEntity
+lm net/minecraft/world/Chunk
+    a isLit
+    b blocks
+    c isChunkLoaded
+    d world
+    e data
+    f skylightMap
+    g blocklightMap
+    h heightMap
+    i lowestBlockHeight
+    j x
+    k z
+    l chunkTileEntityMap
+    m entities
+    n isTerrainPopulated
+    o isModified
+    p neverSave
+    q hasEntities
+    r lastSaveTime
+    a ([BIIIIIII)I setChunkData
+    a (IIIII)Z setBlockIDWithMetadata
+    a (III)I getBlockID
+    a (IIII)Z setBlockID
+    a (IIILow;)V setChunkBlockTileEntity
+    a (II)Z isAtLocation
+    a (Leb;III)I getSavedLightValue
+    a (Leb;IIII)V setLightValue
+    a (Ljava/lang/Class;Leq;Ljava/util/List;)V getEntitiesOfTypeWithinAAAB
+    a (Low;)V addTileEntity
+    a (Lsn;I)V removeEntityAtIndex
+    a (Lsn;Leq;Ljava/util/List;)V getEntitiesWithinAABBForEntity
+    a (Lsn;)V addEntity
+    a (Z)Z needsSaving
+    b (III)I getBlockMetadata
+    b (IIII)V setBlockMetadata
+    b (II)I getHeightValue
+    b (Lsn;)V removeEntity
+    b ()V generateHeightMap
+    c (IIII)I getBlockLightValue
+    c (III)Z canBlockSeeTheSky
+    d (III)Low; getChunkBlockTileEntity
+    e (III)V removeChunkBlockTileEntity
+    e ()V onChunkLoad
+    f ()V onChunkUnload
+    g ()V setChunkModified
+l net/minecraft/world/OreStorage
+ln net/minecraft/block/Material
+    a AIR
+    A CLOTH_OTHER
+    B STONE_OTHER
+    b GRASS
+    c GROUND
+    C materialMapColor
+    D canBurn
+    d WOOD
+    E groundCover
+    e ROCK
+    f IRON
+    F isOpaque
+    G canHarvest
+    g WATER
+    h LAVA
+    H mobilityFlag
+    i LEAF
+    j PLANT
+    k SPONGE
+    l CLOTH
+    m FIRE
+    n SAND
+    o CIRCUIT
+    p GLASS
+    q TNT
+    r LEAF_OTHER
+    s ICE
+    t SNOW
+    u BUILT_SNOW
+    v CACTUS
+    w CLAY
+    x PUMPKIN
+    y PORTAL
+    z CAKE
+    a ()Z isSolid
+    b ()Z getCanBlockGrass
+    c ()Z getIsSolid
+    d ()Z getIsLiquid
+    e ()Z getBurning
+    f ()Lln; setIsGroundCover
+    g ()Z getIsGroundCover
+    h ()Z getIsTranslucent
+    i ()Z getIsHarvestable
+    j ()I getMaterialMobility
+    k ()Lln; setNoPushMobility
+    l ()Lln; setImmovableMobility
+    m ()Lln; setIsTranslucent
+    n ()Lln; setNoHarvest
+    o ()Lln; setBurning
+lo net/minecraft/client/render/model/GhastModel
+    a body
+    b tentacles
+lp net/minecraft/item/BedItem
+lq net/minecraft/client/gui/MultiplayerGui
+    a parentScreen
+    a (Ljava/lang/String;I)I parseIntWithDefault
+lr net/minecraft/client/settings/MovementInputFromOptions
+    f movementKeyStates
+    g gameSettings
+ls net/minecraft/entity/LivingEntity
+    aA defaultPitch
+    aa hurtTime
+    ab maxHurtTime
+    aB moveSpeed
+    ac attackedAtYaw
+    aC numTicksToChaseTarget
+    ad deathTime
+    ae attackTime
+    af cameraPitch
+    a livingSoundTime
+    an newPosRotationIncrements
+    ao newPosX
+    ap newPosY
+    aq newPosZ
+    ar newRotationYaw
+    as newRotationPitch
+    av entityAge
+    aw moveStrafing
+    ax moveForward
+    ay randomYawVelocity
+    az isJumping
+    b currentTarget
+    E heartsHalvesLife
+    H renderYawOffset
+    I prevRenderYawOffset
+    O texture
+    T scoreValue
+    V isMultiplayerEntity
+    W prevSwingProgress
+    X swingProgress
+    Y health
+    Z previousHealth
+    aa ()V onEntityDeath
+    a (DF)Lvf; rayTrace
+    a_ (FF)V moveEntityWithHeading
+    a (Lsn;FF)V faceEntity
+    a (Lsn;IDD)V knockBack
+    b (FFF)F updateRotation
+    b (I)V damageEntity
+    b (Lsn;)V onDeath
+    c (I)V heal
+    c (Liz;)I getItemIcon
+    d (F)F getSwingProgress
+    d_ ()Z canBreatheUnderwater
+    d ()Z getCanSpawnHere
+    e (F)Lbt; getPosition
+    e ()I getTalkInterval
+    e (Lsn;)Z canEntityBeSeen
+    f (F)Lbt; getLook
+    f_ ()V updatePlayerActionState
+    g ()Ljava/lang/String; getLivingSound
+    i ()Ljava/lang/String; getDeathSound
+    j ()I getDropItemId
+    j_ ()Ljava/lang/String; getHurtSound
+    k ()F getSoundVolume
+    l ()I getMaxSpawnedInChunk
+    N ()Z isPlayerSleeping
+    o ()V onLivingUpdate
+    p ()Z isOnLadder
+    q ()V dropFewItems
+    r_ ()Liz; getHeldItem
+    R ()V jump
+    T ()V playLivingSound
+    u ()Z canDespawn
+    V ()V spawnExplosionParticle
+    Y ()Z hasCurrentTarget
+    y ()Z isMovementBlocked
+    Z ()Lsn; getCurrentTarget
+lt net/minecraft/json/JsonListenerToJDOMAdapter
+lu net/minecraft/block/TransparentMaterial
+lv net/minecraft/item/SugarcaneItem
+lw net/minecraft/inventory/Inventory
+    a (II)Liz; decrStackSize
+    a (ILiz;)V setInventorySlotContents
+    a ()I getSizeInventory
+    a_ (Lgs;)Z canInteractWith
+    c ()Ljava/lang/String; getInvName
+    d ()I getInventoryStackLimit
+    f_ (I)Liz; getStackInSlot
+    y_ ()V onInventoryChanged
+lx net/minecraft/entity/FishEntity
+    a shake
+    b angler
+    c bobber
+    d xTile
+    e yTile
+    f zTile
+    g inTile
+    h inGround
+    i ticksInGround
+    j ticksInAir
+    k ticksCatchable
+    r velocityX
+    s velocityY
+    t velocityZ
+    k ()I catchFish
+ly net/minecraft/block/GlowstoneBlock
+lz net/minecraft/network/packet/KeepAlivePacket
 uu net/minecraft/block/Block
 s_mb net/minecraft/server/command/CommandListener
