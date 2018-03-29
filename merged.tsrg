@@ -5,7 +5,7 @@ aa net/minecraft/container/PlayerContainer
 ab net/minecraft/client/gui/SmallGuiButton
     i options
     a ()Lht; getOptions
-ac net/minecraft/FullSnowBlock
+ac net/minecraft/block/FullSnowBlock
 ad net/minecraft/json/exception/JsonSelectorMismatchException
 ae net/minecraft/client/particle/NoteParticle
 af net/minecraft/network/packet/PlayerPositionPacket
@@ -31,7 +31,7 @@ a net/minecraft/network/packet/UseEntityPacket
     b targetEntityId
     c isLeftClick
 an net/minecraft/json/JsonParser
-ao net/minercaft/json/JsonPathMismatchException
+ao net/minecraft/json/JsonPathMismatchException
 ap net/minecraft/world/generator/TallGrassWorldGenerator
 aq net/minecraft/world/MaterialLogic
 ar net/minecraft/entity/WaterEntity
@@ -61,7 +61,7 @@ bc net/minecraft/item/BucketItem
 bd net/minecraft/client/CanvasIsomPreview
 be net/minecraft/world/generator/FlowerWorldGenerator
     a plantBlockId
-bf net/minecraft/world/ChunkLoader
+bf net/minecraft/world/chunk/ChunkLoader
     a (Lfd;II)Llm; loadChunk
     a (Lfd;Llm;)V saveChunk
     b (Lfd;Llm;)V saveExtraChunkData
@@ -80,7 +80,7 @@ bk net/minecraft/block/LeafBlock
     a (Z)V setGraphicsLevel
     h (Lfd;III)V removeLeaves
 bl net/minecraft/item/ShearsItem
-bm net/minercaft/container/FurnaceContainer
+bm net/minecraft/container/FurnaceContainer
     a furnace
     b cookTime
     c burnTime
@@ -99,7 +99,7 @@ bp net/minecraft/entity/GhastEntity
     h aggroCooldown
     a (DDDD)Z isCourseTraversable
 bq net/minecraft/achievement/SimpleStatType
-br net/minecraft/world/ChunkCoordinates
+br net/minecraft/world/chunk/ChunkCoordinates
     a x
     b y
     c z
@@ -173,14 +173,14 @@ ce net/minecraft/client/gui/UnusedGui
     a messageA
     i messageB
 cf net/minecraft/entity/FireballEntity
-cg net/minecraft/client/particle/LavaParticle
+cg net/minecraft/client/particle/LavaParticleTexture
 ch net/minecraft/client/gui/GameOverGui
 ci net/minecraft/client/gui/ItemStatSlotGui
 cj net/minecraft/achievement/StatsSyncher
     b (Ljava/util/Map;)V syncStatsFile
 ck net/minecraft/item/ItemBlock
     a blockId
-cl net/minecraft/world/ChunkProvider
+cl net/minecraft/world/chunk/ChunkProvider
     a (II)Z chunkExists
     a (Lcl;II)V populate
     a (ZLyb;)Z saveChunks
@@ -189,7 +189,7 @@ cl net/minecraft/world/ChunkProvider
     b ()Z canSave
     c (II)Llm; prepareChunk
     c ()Ljava/lang/String; toString
-cm net/minecraft/world/ChunkFolderPattern
+cm net/minecraft/world/chunk/ChunkFolderPattern
 c net/minecraft/entity/LightningBoltEntity
 cn net/minecraft/entity/SpiderEntity
 co net/minecraft/client/gui/OptionsGui
@@ -226,7 +226,7 @@ cv net/minecraft/client/render/BlockRenderer
     r xPosLightValueAO
     s yPosLightValueAO
     t zPosLightValueAO
-cw net/minecraft/Status
+cw net/minecraft/util/Status
     a OK
     b NOT_POSSIBLE_HERE
     c NOT_POSSIBLE_NOW
@@ -244,7 +244,7 @@ cy net/minecraft/block/tileentity/MobSpawnerTileEntity
     a (Ljava/lang/String;)V setEntityId
     b ()Z isPlayerInRange
     d ()V updateDelay
-cz net/minecraft/DownloadResourcesThread
+cz net/minecraft/util/DownloadResourcesThread
     a resourcesFolder
     b minecraft
     c closing
@@ -449,9 +449,9 @@ dx net/minecraft/unknown/MapColor
     p colorValue
     q colorIndex
 dy net/minecraft/client/render/PaintingRenderer
-dz net/minecraft/world/ChunkFile
+dz net/minecraft/world/chunk/ChunkFile
 ea net/minecraft/client/render/model/SheepModel1
-eb net/minecraft/SkyBlock
+eb net/minecraft/unknown/SkyBlock
     a SKY
     b BLOCK
 ec net/minecraft/crafting/Crafter
@@ -517,7 +517,7 @@ ei net/minecraft/world/WorldInfo
     o ()Z getRaining
     p ()I getRainTime
 ej net/minecraft/client/render/model/ZombieModel
-ek net/minecraft/ImageDownloader
+ek net/minecraft/util/ImageDownloader
     a image
     b referenceCount
     c textureName
@@ -586,7 +586,7 @@ es net/minecraft/client/render/SquidRenderer
 et net/minecraft/json/PositionedNode
 eu net/minecraft/network/packet/UpdateHealthPacket
 ev net/minecraft/network/packet/PlayerPositionRotationPacket
-ew net/minecraft/world/ChunkCache
+ew net/minecraft/world/chunk/ChunkCache
     a chunkX
     b chunkZ
     c chunkArray
@@ -806,7 +806,7 @@ fp net/minecraft/client/chat/ChatAllowedCharacters
     b SPECIAL_CHARACTERS
     a ()Ljava/lang/String; getAllowedCharacters
 # synthetic class
-fq net/minecraft/OptionsMappingHelper
+fq net/minecraft/client/settings/OptionsMappingHelper
     a optionMappings
 fr net/minecraft/entity/SkeletonEntity
     a defaultHeldItem
@@ -861,7 +861,7 @@ ge net/minecraft/client/GLAllocation
     a (I)I generateDisplayLists
     a ()V deleteTexturesAndDisplayLists
 gf net/minecraft/item/ItemStatsSorter
-gg net/minecaft/client/gui/DownloadTerrainGui
+gg net/minecraft/client/gui/DownloadTerrainGui
     a netHandler
     i updates
 gh net/minecraft/client/gui/MultiplayerSleepGui
@@ -1159,7 +1159,7 @@ ha net/minecraft/crafting/ToolRecipes
     b RECIPE_ITEMS
     a (Lhk;)V addRecipes
 hb net/minecraft/block/BookshelfBlock
-hc net/minecraft/world/MapStorage
+hc net/minecraft/world/map/MapStorage
     b loadedDataMap
     c loadedDataList
     d idCounts
@@ -1201,7 +1201,7 @@ hl net/minecraft/entity/ItemEntity
     b age
     c delayBeforeCanPickup
     f health
-hm net/minecraft/world/MapDataBase
+hm net/minecraft/world/map/MapDataBase
     b dirty
     a (Lnu;)V readFromNBT
     a ()V markDirty
@@ -1232,7 +1232,7 @@ hr net/minecraft/client/sound/SoundPool
 hs net/minecraft/client/particle/PortalParticle
     g portalTickCounter
     h portalTextureData
-ht net/minecraft/Options
+ht net/minecraft/client/settings/Options
     a MUSIC
     b SOUND
     c INVERT_MOUSE
@@ -1363,7 +1363,7 @@ io net/minecraft/client/sound/MusCodec
 ip net/minecraft/client/render/ChickenRenderer
     a (Lww;DDDFF)V renderChicken
     a (Lww;F)F getWingRotation
-iq net/minecraft/Art
+iq net/minecraft/world/Art
     a KEBAB
     A title
     b AZTEC
@@ -1405,7 +1405,7 @@ is net/minecraft/crafting/ShapedRecipes
 it net/minecraft/container/CraftingTableContainer
     a craftingMatrix
     b craftingResult
-iu net/minecraft/world/MapData
+iu net/minecraft/world/map/MapData
 iv net/minecraft/client/gui/StatSlotGui
 iw net/minecraft/network/packet/OpenWindowPacker
     a windowId
@@ -1492,7 +1492,7 @@ jc net/minecraft/entity/EntityList
     a (Lnu;Lfd;)Lsn; createEntityFromNBT
     a (Lsn;)I getEntityID
     b (Lsn;)Ljava/lang/String; getEntityString
-jd net/minecraft/world/SkyChunkProvider
+jd net/minecraft/world/chunk/SkyChunkProvider
 je net/minecraft/client/render/TileEntitySpecialRenderer
     a tileEntityRenderer
     a (Lfd;)V func_31069_a
@@ -1585,9 +1585,9 @@ jn net/minecraft/util/OS1
     b SOLARIS
     c WINDOWS
     d MACOS
-jo net/minercaft/entity/EntitySorter
+jo net/minecraft/entity/EntitySorter
     a (Ldk;Ldk;)I sortByDistanceToEntity
-jp net/minercaft/block/BreakableBlock
+jp net/minecraft/block/BreakableBlock
     a flag
 jq net/minecraft/block/PistonBaseBlock
     a isSticky
@@ -1684,7 +1684,7 @@ ke net/minecraft/client/gui/Button
     b (Lnet/minecraft/client/Minecraft;II)V mouseDragged
     c (Lnet/minecraft/client/Minecraft;II)Z mousePressed
 kf net/minecraft/json/JsonArrayNodeSelector
-kg net/minecraft/FrozenThread
+kg net/minecraft/util/FrozenThread
     a minecraft
 kh net/minecraft/achievement/StatFormatter
     a minecraft
@@ -1785,7 +1785,7 @@ kv net/minecraft/client/settings/GameSettings
     b ()V saveOptions
     c (Lht;)Ljava/lang/String; getKeyBinding
 kw net/minecraft/client/particle/Particle
-kx net/minecraft/world/GenerateChunkProvider
+kx net/minecraft/world/chunk/GenerateChunkProvider
     a lastQueriedChunkXPos
     b lastQueriedChunkZPos
     c blankChunk
@@ -1806,6 +1806,7 @@ ky net/minecraft/crafting/RecipeSorter
 # synthetic class
 kz net/minecraft/json/NodeTypeMappingHelper
 la net/minecraft/item/HoeItem
+lb net/minecraft/json/JsonNodeBuilder
 lc net/minecraft/client/render/model/SkeletonModel
 ld net/minecraft/world/McRegionChunkLoader
     a worldDir
@@ -1889,7 +1890,7 @@ ll net/minecraft/client/render/TileEntityRenderer
     a (Low;)Z hasSpecialRenderer
     a ()Lsj; getFontRenderer
     b (Low;)Lje; getSpecialRendererForEntity
-lm net/minecraft/world/Chunk
+lm net/minecraft/world/chunk/Chunk
     a isLit
     b blocks
     c isChunkLoaded
