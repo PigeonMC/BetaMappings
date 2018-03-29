@@ -31,7 +31,7 @@ a net/minecraft/network/packet/UseEntityPacket
     b targetEntityId
     c isLeftClick
 an net/minecraft/json/JsonParser
-ao net/minecraft/json/JsonPathMismatchException
+ao net/minecraft/json/exception/JsonPathMismatchException
 ap net/minecraft/world/generator/TallGrassWorldGenerator
 aq net/minecraft/world/MaterialLogic
 ar net/minecraft/entity/WaterEntity
@@ -1229,7 +1229,7 @@ hr net/minecraft/client/sound/SoundPool
     a ()Lbh; getRandomSound
     a (Ljava/lang/String;)Lbh; getRandomSoundFromSoundPool
     a (Ljava/lang/String;Ljava/io/File;)Lbh; addSound
-hs net/minecraft/client/particle/PortalParticle
+hs net/minecraft/client/particle/PortalParticleTexture
     g portalTickCounter
     h portalTextureData
 ht net/minecraft/client/settings/Options
@@ -2095,5 +2095,678 @@ lx net/minecraft/entity/FishEntity
     k ()I catchFish
 ly net/minecraft/block/GlowstoneBlock
 lz net/minecraft/network/packet/KeepAlivePacket
+ma net/minecraft/util/WatchableObject
+    a objectType
+    b dataValueId
+    c watchedObject
+    d isWatching
+    a ()I getDataValueId
+    a (Ljava/lang/Object;)V setObject
+    a (Z)V setWatching
+    b ()Ljava/lang/Object; getObject
+    c ()I getObjectType
+mb net/minecraft/client/render/AbstractEntityRenderer
+mc net/minecraft/client/render/ArrowRenderer
+    a (Lsl;DDDFF)V renderArrow
+md net/minecraft/client/render/RendererSorter
+    a baseEntity
+    a (Ldk;Ldk;)I doCompare
+me net/minecraft/client/render/PigRenderer
+    a (Lwh;IF)Z renderSaddledPig
+mf net/minecraft/network/packet/NamedEntitySpawnPacket
+    a entityId
+    b name
+    c x
+    d y
+    e z
+    f rotation
+    g pitch
+    h currentItem
+mg net/minecraft/client/gui/WorldSlotGui
+    a parentWorldGui
+mh net/minecraft/util/UnexpectedThrowable
+    a description
+    b exception
+mi net/minecraft/nbt/NBTTagLong
+    a value
+mj net/minecraft/client/render/SlimeRenderer
+    a scaleAmount
+    a (Luw;F)V scaleSlime
+    a (Luw;IF)Z renderSlime
+mk net/minecraft/client/gui/LoadingScreenGui
+    b minecraft
+    a (Ljava/lang/String;)V printText
+ml net/minecraft/json/JsonFormatter
+mm net/minecraft/client/ClientWorld
+    D sendQueue
+    a (IIZ)V doPreChunk
+    c (I)Lsn; removeEntityFromWorld
+m net/minecraft/client/render/CreeperRenderer
+    a (Lgb;FF)I updateCreeperColorMultiplier
+    a (Lgb;F)V updateCreeperScale
+mn net/minecraft/network/packet/CloseWindowPacket
+    a windowId
+mo net/minecraft/item/EggItem
+mp net/minecraft/network/packet/HandshakePacket
+    a username
+mq net/minecraft/crafting/CraftingInventory
+    a stackList
+    c eventHandler
+mr net/minecraft/item/SaplingItem
+ms net/minecraft/world/generator/ClayGenerator
+    a clayBlockId
+    b blockAmount
+mt net/minecraft/block/OreBlock
+mu net/minecraft/client/particle/SnowShovelParticle
+mv net/minecraft/network/packet/UpdateProgressBarPacket
+    a windowId
+    b progressBar
+    c progressBarValue
+mw net/minecraft/client/render/model/SheepModel2
+mx net/minecraft/world/OldSaveHandler
+my net/minecraft/json/JsonObjectNodeContainer
+mz net/minecraft/json/exception/JsonChainMismatchException
+na net/minecraft/json/JsonArrayNodeContainer
+nb net/minecraft/network/ClientHandler
+    c random
+    d disconnected
+    e netManager
+    f minecraft
+    g clientWorld
+    a (I)Lsn; getEntityById
+    a ()V processReadPackets
+    b (Lki;)V addToSendQueue
+    b ()V disconnect
+nc net/minecraft/json/JsonFieldNodeContainer
+nd net/minecraft/network/packet/ItemSpawnPacket
+    a entityId
+    b x
+    c y
+    d z
+    e rotation
+    f pitch
+    g roll
+    h itemId
+    i count
+    l itemDamage
+ne net/minecraft/block/GravelBlock
+nf net/minecraft/util/ImageProcessor
+    a (Ljava/awt/image/BufferedImage;)Ljava/awt/image/BufferedImage; parseUserSkin
+ng net/minecraft/crafting/DyeRecipes
+    a (Lhk;)V addRecipes
+nh net/minecraft/util/StringTranslator
+    a INSTANCE
+    b translateTable
+    a (Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String; translateKeyFormat
+    a (Ljava/lang/String;)Ljava/lang/String; translateKey
+    a ()Lnh; getInstance
+    b (Ljava/lang/String;)Ljava/lang/String; translateNamedKey
+ni net/minecraft/block/CropBlock
+    d_ (Lfd;III)V fertilize
+    i (Lfd;III)F getGrowthRate
+nj net/minecraft/client/gui/VideoSettingsGui
+    j gameSettingsGui
+nk net/minecraft/block/IceBlock
+nl net/minecraft/world/SaveFormat
+    a (Ljava/lang/String;Lyb;)Z convertMapFormat
+    a (Ljava/lang/String;Z)Lwt; getSaveLoader
+    a (Ljava/lang/String;)Z isOldMapFormat
+    c ()V flushCache
+nm net/minecraft/network/packet/AnimationPacket
+    a entityId
+    b animate
+n net/minecraft/client/render/GlobalRenderer
+    A glSkyList2
+    a tileEntities
+    b dummyBuffer
+    B minBlockX
+    C minBlockY
+    c occlusionResult
+    d dummyInt0
+    D minBlockZ
+    e glDummyList
+    E maxBlockX
+    F maxBlockY
+    f prevSortX
+    G maxBlockZ
+    g prevSortY
+    h prevSortZ
+    H renderDistance
+    i damagePartialTime
+    I renderEntitiesStartupCounter
+    J countEntitiesTotal
+    j frustrumCheckOffset
+    K countEntitiesRendered
+    k world
+    L countEntitiesHidden
+    l renderEngine
+    M renderersLoaded
+    m worldRenderersToUpdate
+    N renderersBeingClipped
+    n sortedWorldRenderers
+    O renderersBeingOccluded
+    o worldRenderers
+    p renderChunksWide
+    P renderersBeingRendered
+    q renderChunksTall
+    Q renderersSkippingRenderPass
+    r renderChunksDeep
+    R worldRenderersCheckIndex
+    s glRenderListBase
+    S glRenderLists
+    T allRenderLists
+    t minecraft
+    u globalRenderBlocks
+    v glOcclusionQueryBase
+    w occlusionEnabled
+    x cloudOffsetX
+    y starGLCallList
+    z glSkyList
+    a (F)V renderSky
+    a (ID)V renderAllRenderLists
+    a (IIID)I renderSortedRenderers
+    a (II)V checkOcclusionQueryResult
+    a (Lbt;Lyn;F)V renderEntities
+    a (Leq;)V drawOutlinedBoundingBox
+    a (Lfd;)V changeWorld
+    a (Lgs;Lvf;ILiz;F)V drawBlockBreaking
+    a (Lls;ID)I sortAndRender
+    a (Lls;Z)Z updateRenderers
+    a (Lyn;F)V clipRenderersByFrustrum
+    a ()V loadRenderers
+    b (F)V renderClouds
+    b (III)V markRenderersForNewPosition
+    b (Lgs;Lvf;ILiz;F)V drawSelectionBox
+    b ()Ljava/lang/String; getDebugInfoRenders
+    c (F)V renderCloudsFancy
+    c ()Ljava/lang/String; getDebugInfoEntities
+    d ()V updateClouds
+    g ()V renderStars
+nn net/minecraft/client/render/model/QuadrupedModel
+    d head
+    e body
+    f leg1
+    g leg2
+    h leg3
+    i leg4
+no net/minecraft/client/render/model/SlimeModel
+    a bodies
+    b rightEye
+    c leftEye
+    d mouth
+np net/minecraft/client/sound/MusInputStream
+    a buffer
+    b codec
+    c hash
+    d inputStream
+nq net/minecraft/client/render/model/MinecartModel
+    a sideModels
+nr net/minecraft/block/LeafBaseBlock
+    b graphicsLevel
+ns net/minecraft/network/packet/AttachEntityPacket
+    a entityId
+    b vehicleEntityId
+nt net/minecraft/entity/GiantZombieEntity
+nu net/minecraft/nbt/NBTTagCompound
+    a tagMap
+    a (Ljava/lang/String;[B)V setByteArray
+    a (Ljava/lang/String;B)V setByte
+    a (Ljava/lang/String;D)V setDouble
+    a (Ljava/lang/String;F)V setFloat
+    a (Ljava/lang/String;I)V setInteger
+    a (Ljava/lang/String;J)V setLong
+    a (Ljava/lang/String;Lij;)V setTag
+    a (Ljava/lang/String;Ljava/lang/String;)V setString
+    a (Ljava/lang/String;Lnu;)V setCompoundTag
+    a (Ljava/lang/String;S)V setShort
+    a (Ljava/lang/String;Z)V setBoolean
+    b (Ljava/lang/String;)Z hasKey
+    c (Ljava/lang/String;)B getByte
+    c ()Ljava/util/Collection; getList
+    d (Ljava/lang/String;)S getShort
+    e (Ljava/lang/String;)I getInteger
+    f (Ljava/lang/String;)J getLong
+    g (Ljava/lang/String;)F getFloat
+    h (Ljava/lang/String;)D getDouble
+    i (Ljava/lang/String;)Ljava/lang/String; getString
+    j (Ljava/lang/String;)[B getByteArray
+    k (Ljava/lang/String;)Lnu; getCompoundTag
+    l (Ljava/lang/String;)Lsp; getTagList
+    m (Ljava/lang/String;)Z getBoolean
+nv net/minecraft/network/PacketCounter
+    a totalPackets
+    b totalBytes
+    a (I)V addPacket
+nw net/minecraft/client/render/Tessellator
+    a INSTANCE
+    A vboCount
+    B bufferSize
+    b convertQuadsToTriangles
+    c tryVBO
+    d byteBuffer
+    e intBuffer
+    f floatBuffer
+    g rawBuffer
+    h vertexCount
+    i textureU
+    j textureV
+    k color
+    l hasColor
+    m hasTexture
+    n hasNormals
+    o rawBufferIndex
+    p addedVertices
+    q isColorDisabled
+    r drawMode
+    s xOffset
+    t yOffset
+    u zOffset
+    v normal
+    w isDrawing
+    x useVBO
+    y vertexBuffers
+    z vboIndex
+    a (DDDDD)V addVertexWithUV
+    a (DDD)V addVertex
+    a (DD)V setTextureUV
+    a (FFFF)V setColorRGBA
+    a (FFF)V setColorOpaque
+    a (IIII)V setColorRGBA
+    a (III)V setColorOpaque
+    a (II)V setColorRGBA
+    a (I)V startDrawing
+    a ()V draw
+    b (DDD)V setTranslationD
+    b (FFF)V setNormal
+    b (I)V setColorOpaque
+    b ()V startDrawingQuads
+    c (FFF)V setTranslationF
+    c ()V disableColor
+    d ()V reset
+nx net/minecraft/block/StaionaryBlock
+ny net/minecraft/achievement/Achievement
+    a displayColumn
+    b displayRow
+    c parentAchievement
+    d theItemStack
+    l achievementDescription
+    m statStringFormatter
+    n isSpecial
+    a (Lgt;)Lny; setStatStringFormatter
+    b ()Lny; setSpecial
+    c ()Lny; registerAchievement
+    e ()Ljava/lang/String; getDescription
+    f ()Z getSpecial
+nz net/minecraft/network/packet/LoginPacket
+    a protocolVersion
+    b username
+    c mapSeed
+    d dimension
+oa net/minecraft/block/SoulSandBlock
+ob net/minecraft/PlayerController
+    a minecraft
+    a (F)V setPartialTime
+    a (IIII)V clickBlock
+    a (Lgs;Lfd;Liz;IIII)Z sendPlaceBlock
+    a (Lgs;Lfd;Liz;)Z sendUseItem
+    a (Lgs;Lsn;)V interactWithEntity
+    a (Lgs;)V flipPlayer
+    a ()V resetBlockRemoving
+    b ()F getBlockReachDistance
+    b (IIII)Z sendBlockRemoved
+    b (Lfd;)Lgs; createPlayer
+    b (Lgs;Lsn;)V attackEntity
+    c (IIII)V sendBlockRemoving
+    c ()V updateController
+    d ()Z shouldDrawHUD
+oc net/minecraft/json/JsonNumberNodeBuilder
+od net/minecraft/crafting/FoodRecipes
+    a (Lhk;)V addRecipes
+oe net/minecraft/json/JsonArray
+of net/minecraft/network/packet/StatisticPacket
+og net/minecraft/inventory/LargeChestInventory
+    a name
+    b upperChest
+    c lowerChest
+oh net/minecraft/client/particle/WaterFlowParticle
+oi net/minecraft/block/ButtonBlock
+    h (Lfd;III)I getOrientation
+oj net/minecraft/network/packet/TransactionPacket
+    a windowId
+ok net/minecraft/world/chunk/AbstractChunkProvider
+    a droppedChunksSet
+    c chunkProvider
+    d chunkLoader
+    e chunkMap
+    f chunkList
+    d (II)Llm; loadChunkFromFile
+ol net/minecraft/json/JsonNodeFactories
+om net/minecraft/block/FlowingBlock
+    a numAdjacentSources
+    b isOptimalFlowDirection
+    c flowCost
+    b (Lfd;IIIII)I calculateFlowCost
+    f (Lfd;IIII)I getSmallestFlowDecay
+    h (Lfd;IIII)V flowIntoBlock
+    k (Lfd;III)[Z getOptimalFlowDirections
+    l (Lfd;III)Z blockBlocksFlow
+    m (Lfd;III)Z liquidCanDisplaceBlock
+o net/minecraft/client/render/model/WolfModel
+    a wolfHeadMain
+    b wolfBody
+    c wolfLeg1
+    d wolfLeg2
+    e wolfLeg3
+    f wolfLeg4
+    g wolfRightEar
+    h wolfLeftEar
+    i wolfSnout
+    j wolfTail
+    k wolfMane
+on net/minecraft/client/render/PrimedTntRenderer
+    a blockRenderer
+oo net/minecraft/client/gui/CraftingGui
+op net/minecraft/client/particle/PortalParticle
+oq net/minecraft/block/TrapDoorBlock
+    a (Lfd;IIIZ)V onPoweredBlockChange
+    d (I)V setBlockBoundsForBlockRender
+    e (I)Z isTrapdoorOpen
+or net/minecraft/block/CactusBlock
+os net/minecraft/client/PlayerControllerSP
+    f currentBlockDamage
+    g previousBlockDamage
+    i blockHitWait
+ot net/minecraft/block/DirtBlock
+ou net/minecraft/world/PortalMaterial
+ov net/minecraft/client/gui/FurnaceGui
+    l furnaceInventory
+ow net/minecraft/block/tileentity/TileEntity
+    a NAME_TO_CLASS
+    b CLASS_TO_NAME
+    d world
+    e x
+    f y
+    g z
+    a (DDD)D getDistanceFrom
+    a (Ljava/lang/Class;Ljava/lang/String;)V addMapping
+    a (Lnu;)V readFromNBT
+    b (Lnu;)V writeToNBT
+    c (Lnu;)Low; createAndLoadEntity
+    e ()I getBlockMetadata
+    f ()Luu; getBlockType
+    n_ ()V updateEntity
+ox net/minecraft/network/packet/RespawnPacket
+oy net/minecraft/json/JsonObjectNodeList
+oz net/minecraft/client/gui/IngameMenuGui
+    a updateCounter
+    i updateCounter2
+pa net/minecraft/client/DefaultTexturePack
+    e texturePackName
+    f texturePackThumbnail
+pb net/minecraft/client/particle/SlimeParticle
+pc net/minecraft/block/RailBlock
+    a isPowered
+    a (Lpc;)Z isPoweredBlockRail
+    d (I)Z isRailBlock
+    h (Lfd;III)Z isRailBlockAt
+    i ()Z getIsPowered
+pd net/minecraft/util/OS2
+    a LINUX
+    b SOLARIS
+    c WINDOWS
+    d MACOS
+    e UNKNOWN
+    f UNKNOWN2
+pe net/minecraft/network/packet/ChatPacket
+    a message
+pf net/minecraft/network/NetworkManager
+    a threadSyncObject
+    b readThreadCount
+    c writeThreadCount
+    f chunkDataSendCounter
+    g writeQueueLock
+    h networkSocket
+    i remoteSocketAddress
+    j socketInputStream
+    k socketOutputStream
+    l isRunning
+    m readPackets
+    n dataPackets
+    o chunkDataPackets
+    p netHandler
+    q isServerTerminating
+    r writeThread
+    s readThread
+    t isTerminating
+    u terminationReason
+    w timeSinceLastRead
+    x writeQueueByteLength
+    a (Ljava/lang/Exception;)V onNetworkError
+    a (Ljava/lang/String;[Ljava/lang/Object;)V networkShutdown
+    a (Lki;)V addToSendQueue
+    a (Lpf;)Z isRunning
+    a ()V wakeThreads
+    b (Lpf;)Z isServerTerminating
+    b ()V processReadPackets
+    c (Lpf;)Z readNetworkPacket
+    d (Lpf;)Z writeNetworkPacket
+    d ()Z writePacket
+    e ()Z readPacket
+    g (Lpf;)Ljava/lang/Thread; getReadThread
+    h (Lpf;)Ljava/lang/Thread; getWriteThread
+pg net/minecraft/world/generator/WorldGenerator
+    a (Lfd;Ljava/util/Random;III)Z generate
+ph net/minecraft/block/DetectorRailBlock
+    f (Lfd;IIII)V setStateIfMinecartInteractsWithRail
+pi net/minecraft/client/render/LightningBoltRenderer
+pj net/minecraft/unknown/TestPlayerController
+pk net/minecraft/world/generator/NetherCaveGenerator
+pl net/minecraft/client/render/FishRenderer
+pm net/minecraft/world/WorldAccess
+    a (IIILow;)V doNothingWithTileEntity
+    a (III)V markBlockAndNeighborsNeedsUpdate
+    a (Ljava/lang/String;DDDDDD)V spawnParticle
+    a (Ljava/lang/String;DDDFF)V playSound
+    a (Ljava/lang/String;III)V playRecord
+    a (Lsn;)V obtainEntitySkin
+    b (IIIIII)V markBlockRangeNeedsUpdate
+    b (Lsn;)V releaseEntitySkin
+    e ()V updateAllRenderers
+p net/minecraft/nbt/NBTTagFloat
+    a floatValue
+pn net/minecraft/json/JsonFieldBuilder
+po net/minecraft/client/render/SignTileEntityRenderer
+    b signModel
+    a (Lyk;DDDF)V renderTileEntitySignAt
+pp net/minecraft/nbt/NBTTagInt
+    a intValue
+pq net/minecraft/client/render/GhastRenderer
+pr net/minecraft/achievement/StatBlockSorter
+ps net/minecraft/client/render/ModelRenderer
+    a rotationPointX
+    b rotationPointY
+    c rotationPointZ
+    d rotateAngleX
+    e rotateAngleY
+    f rotateAngleZ
+    g mirror
+    h showModel
+    j corners
+    k faces
+    l textureOffsetX
+    m textureOffsetY
+    n compiled
+    o displayList
+    a (FFFIIIF)V addBox
+    a (FFFIII)V addBox
+    a (FFF)V setRotationPoint
+    a (F)V render
+    b (F)V renderWithRotation
+    c (F)V postRender
+    d (F)V compileDisplayList
+pt net/minecraft/block/NoteBlock
+pu net/minecraft/json/JsonNodeContainer
+pv net/minecraft/inventory/ArmorSlot
+    d armorType
+    e inventory
+pw net/minecraft/world/generator/TaigaGenerator1
+px net/minecraft/client/render/EntityRenderer
+    b anaglyphField
+    c itemRenderer
+    D cloudFog
+    E cameraZoom
+    F cameraYaw
+    f fogColorBuffer
+    G cameraPitch
+    g fogColorRed
+    h fogColorGreen
+    H prevFrameTime
+    i fogColorBlue
+    j minecraft
+    J random
+    k farPlaneDistance
+    K rainSoundCounter
+    L fogColor2
+    l rendererUpdateCount
+    M fogColor1
+    m pointedEntity
+    n mouseFilterXAxis
+    o mouseFilterYAxis
+    p mouseFilterDummy1
+    q mouseFilterDummy2
+    r mouseFilterDummy3
+    s mouseFilterDummy4
+    a (FI)V setupCameraTransform
+    a (FJ)V renderWorld
+    a (F)V getMouseOver
+    a (IF)V setupFog
+    a ()V updateRenderer
+    b (F)V updateCameraAndRender
+    c (F)V renderRainSnow
+    c ()V addRainParticles
+    d (F)F getFOVModifier
+    e (F)V hurtCameraEffect
+    f (F)V setupViewBobbing
+    g (F)V orientCamera
+    h (F)V updateFogColor
+py net/minecraft/world/Timer
+    a ticksPerSecond
+    b elapsedTicks
+    c renderPartialTicks
+    d timerSpeed
+    e elapsedPartialTicks
+    f lastHRTime
+    g lastSyncSysClock
+    h lastSyncHRClock
+    j timeSyncAdjustment
+    a ()V updateTimer
+pz net/minecraft/network/packet/RelativeEntityPositionRotationPacket
 uu net/minecraft/block/Block
+yk net/minecraft/block/tileentity/SignTileEntity
 s_mb net/minecraft/server/command/CommandListener
+net/minecraft/client/Minecraft net/minecraft/client/MinecraftClient
+    aa saveLoader
+    ab serverName
+    ac serverPort
+    ad textureWaterFX
+    ae textureLavaFX
+    af minecraftDir
+    ag mouseTicksRan
+    ah joinPlayerCounter
+    A applet
+    a INSTANCE
+    B sndManager
+    C mouseHelper
+    c playerController
+    d displayWidth
+    D texturePackList
+    e displayHeight
+    E frameTimes
+    f theWorld
+    F tickTimes
+    G numRecordedFrameTimes
+    g renderGlobal
+    H hasPaidCheckTime
+    h thePlayer
+    i renderViewEntity
+    I statFileWriter
+    j effectRenderer
+    J running
+    K debug
+    k session
+    L isTakingScreenshot
+    l minecraftUri
+    m canvas
+    M prevFrameTime
+    n hideQuitButton
+    N inGameHasFocus
+    o isGamePaused
+    O isRaining
+    p renderEngine
+    P systemTime
+    q fontRenderer
+    Q fullscreen
+    r currentScreen
+    R hasCrashed
+    S glCapabilities
+    s loadingScreen
+    t entityRenderer
+    T timer
+    U downloadResourcesThread
+    u achievementGui
+    v ingameGui
+    V ticksRan
+    W leftClickCounter
+    w skipRenderWorld
+    X tempDisplayWidth
+    y objectMouseOver
+    Y tempDisplayHeight
+    z gameSettings
+    Z dataDir
+    a (II)V resize
+    a (I)V clickMouse
+    a (J)V displayDebugInfo
+    a (Lda;)V displayGuiScreen
+    a (Lfd;Ljava/lang/String;Lgs;)V changeWorld
+    a (Lfd;Ljava/lang/String;)V changeWorld2
+    a (Lfd;)V changeWorld1
+    a (Ljava/lang/String;I)V setServer
+    a (Ljava/lang/String;)Ljava/io/File; getAppDir
+    a (Ljava/lang/String;Ljava/io/File;)V installResource
+    a (Ljava/lang/String;Ljava/lang/String;J)V startWorld
+    a (Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V startMainThread
+    a (Lmh;)V displayUnexpectedThrowable
+    A ()V clickMiddleMouseButton
+    a ()V startGame
+    a (ZI)V respawn
+    b ()Ljava/io/File; getMinecraftDir
+    b (Ljava/lang/String;Ljava/lang/String;)V convertMapFormat
+    b (Ljava/lang/String;)Z lineIsCommand
+    b (Lmh;)V onMinecraftCrash
+    c ()Lnl; getSaveLoader
+    C ()V forceReload
+    d ()V shutdownMinecraftApplet
+    f ()V shutdown
+    g ()V setIngameFocus
+    h ()V setIngameNotInFocus
+    i ()V displayInGameMenu
+    j ()V toggleFullscreen
+    k ()V runTick
+    l ()Z isMultiplayerWorld
+    m ()V usePortal
+    n ()Lcx; getOpenGlCapsChecker
+    s ()Lnb; getSendQueue
+    t ()Z isGuiEnabled
+    u ()Z isFancyGraphicsEnabled
+    v ()Z isAmbientOcclusionEnabled
+    w ()Z isDebugInfoEnabled
+    x ()V loadScreen
+    y ()Lpd; getOS
+    z ()V screenshotListener
+net/minecraft/client/MinecraftApplet net/minecraft/client/MinecraftApplet
+    a canvas
+    b minecraft
+    c thread
+    a ()V startMainThread
+    b ()V shutdown
+    c ()V clearApplet
