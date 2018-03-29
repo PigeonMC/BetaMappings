@@ -1628,6 +1628,182 @@ jx net/minecraft/util/MCHash
 jy net/minecraft/crafting/CraftingRecipes
     a (Lhk;)V addRecipes
 jz net/minecraft/network/packet/SleepPacket
+ka net/minecraft/json/JsonNodeSelectors
+kb net/minecraft/network/packet/WindowItemPacket
+    a windowId
+    b itemStack
+kc net/minecraft/client/particle/HeartParticle
+kd net/minecraft/world/generator/BiomeGenerator
+    a RAIN_FOREST
+    b SWAMPLAND
+    c SEASONAL_FOREST
+    d FOREST
+    e SAVANNA
+    f SHRUB_LAND
+    g TAIGA
+    h DDESERT
+    i PLAINS
+    j ICE_DESERT
+    k TUNDRA
+    l NETHER
+    m SKY
+    n biomeName
+    o color
+    p topBlock
+    q fillerBlock
+    s spawnableMonsterList
+    t spawnableCreatureList
+    u spawnableWaterCreatureList
+    v enableSnow
+    w enableRain
+    x biomeLookupTable
+    a (DD)Lkd; getBiomeFromLookup
+    a (FF)Lkd; getBiome
+    a (F)I getSkyColorByTemp
+    a (Ljava/lang/String;)Lkd; setBiomeName
+    a (Ljava/util/Random;)Lpg; getRandomWorldGenForTrees
+    a (Llk;)Ljava/util/List; getSpawnableList
+    a ()V generateBiomeLookup
+    b (I)Lkd; setColor
+    b ()Lkd; setEnableSnow
+    c ()Z getEnableSnow
+    d ()Z canSpawnLightningBolt
+    e ()Lkd; setDisableRain
+ke net/minecraft/client/gui/Button
+    a width
+    b height
+    c xPosition
+    d yPosition
+    e displayString
+    f id
+    g enabled
+    h enabled2
+    a (II)V mouseReleased
+    a (Lnet/minecraft/client/Minecraft;II)V drawButton
+    a (Z)I getHoverState
+    b (Lnet/minecraft/client/Minecraft;II)V mouseDragged
+    c (Lnet/minecraft/client/Minecraft;II)Z mousePressed
+kf net/minecraft/json/JsonArrayNodeSelector
 kg net/minecraft/FrozenThread
+    a minecraft
+kh net/minecraft/achievement/StatFormatter
+    a minecraft
+ki net/minecraft/network/packet/Packet
+    a ID_TO_CLASS
+    b CLASS_TO_ID
+    c CLIENT_PACKETS
+    d SERVER_PACKETS
+    e packetStats
+    f totalPacketsCount
+    j creationTimeMillis
+    k isChunkDataPacket
+    a (I)Lki; getNewPacket
+    a ()I getPacketSize
+    a (IZZLjava/lang/Class;)V addIdClassMapping
+    a (Ljava/io/DataInputStream;I)Ljava/lang/String; readString
+    a (Ljava/io/DataInputStream;)V readPacketData
+    a (Ljava/io/DataInputStream;Z)Lki; readPacket
+    a (Ljava/io/DataOutputStream;)V writePacketData
+    a (Ljava/lang/String;Ljava/io/DataOutputStream;)V writeString
+    a (Lki;Ljava/io/DataOutputStream;)V writePacket
+    a (Lti;)V processPacket
+    c ()I getPacketId
+kj net/minecraft/client/GameWindowListener
+    a minecraft
+    b minecraftThread
+kk net/minecraft/json/JsonStringNodeSelector
+kl net/minecraft/client/render/FireballRenderer
+km net/minecraft/item/DyeItem
+    a DYE_COLORS
+    bk DYE_HUE
+k net/minecraft/world/generator/ForestGenerator
+# synthetic class
+kn net/minecraft/util/OSMappingHelper
+    a osMapping
+ko net/minecraft/client/render/model/BaseModel
+    m onGround
+    n isRiding
+    a (FFFFFF)V render
+    a (Lls;FFF)V setLivingAnimations
+    b (FFFFFF)V setRotationAngles
+kp net/minecraft/client/PremiumChecker
+kq net/minecraft/client/MinecraftImpl
+    a frame
+kr net/minecraft/json/JsonObject
+ks net/minecraft/block/LockedChestBlock
+kt net/minecraft/world/generator/DeadShrubGenerator
+ku net/minecraft/item/WatchEffect
+    g minecraft
+    h watchIconImageData
+    i dialImageData
+kv net/minecraft/settings/GameSettings
+    a musicVolume
+    A thirdPersonView
+    B showDebugInfo
+    b soundVolume
+    C lastServer
+    c mouseSensitivity
+    d invertMouse
+    e renderDistance
+    E smoothCamera
+    f viewBobbing
+    g anaglyph
+    h advancedOpengl
+    I guiScale
+    i limitFramerate
+    j fancyGraphics
+    J RENDER_DISTANCES
+    k ambientOcclusion
+    K DIFFICULTIES
+    L GUISCALES
+    l skin
+    m keyBindForward
+    M LIMIT_FRAMERATES
+    n keyBindLeft
+    N optionsFile
+    o keyBindBack
+    p keyBindRight
+    q keyBindJump
+    r keyBindInventory
+    s keyBindDrop
+    t keyBindChat
+    u keyBindToggleFog
+    v keyBindSneak
+    w keyBindings
+    x mc
+    y difficulty
+    z hideGui
+    a (II)V setKeyBinding
+    a (I)Ljava/lang/String; getKeyBindingDescription
+    a (Lht;)F getOptionFloatValue
+    a (Lht;F)V setOptionFloatValue
+    a (Lht;I)V setOptionValue
+    a (Ljava/lang/String;)F parseFloat
+    a ()V loadOptions
+    b (I)Ljava/lang/String; getOptionDisplayString
+    b (Lht;)Z getOptionOrdinalValue
+    b ()V saveOptions
+    c (Lht;)Ljava/lang/String; getKeyBinding
+kw net/minecraft/client/particle/Particle
+kx net/minecraft/world/GenerateChunkProvider
+    a lastQueriedChunkXPos
+    b lastQueriedChunkZPos
+    c blankChunk
+    d chunkProvider
+    e chunkLoader
+    f chunks
+    g worldObj
+    h lastQueriedChunk
+    i curChunkX
+    j curChunkY
+    a (Llm;)V saveExtraChunkData
+    b (Llm;)V saveChunk
+    d (II)V setCurrentChunkOver
+    e (II)Z canChunkExist
+ky net/minecraft/crafting/RecipeSorter
+    a craftingManager
+    a (Ldt;Ldt;)I compareRecipes
+# synthetic class
+kz net/minecraft/json/NodeTypeMappingHelper
 uu net/minecraft/block/Block
 s_mb net/minecraft/server/command/CommandListener
