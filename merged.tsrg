@@ -2498,6 +2498,7 @@ ow net/minecraft/block/tileentity/TileEntity
     e ()I getBlockMetadata
     f ()Luu; getBlockType
     n_ ()V updateEntity
+    y_ ()V onInventoryChanged
 ox net/minecraft/network/packet/RespawnPacket
 oy net/minecraft/json/JsonObjectNodeList
 oz net/minecraft/client/gui/IngameMenuGui
