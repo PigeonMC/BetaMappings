@@ -29,6 +29,7 @@ ci s_ci
 ff s_ff
 u s_u
 dq s_dq
+    b (Ljava/lang/String;)Ljava/io/File; a
 ld s_ld
 eg s_eg
 br s_br
@@ -42,13 +43,15 @@ nf s_nf
 mb s_mb
 he s_he
 dp s_dp
+    n ()Lay; u
+    p ()Lom; getSaveHandler
 s s_s
 n z
 iv nz
 av bo
 pj yb
 of wl
-ie mx
+ie s_ie
 gz la
 nv vw
 po yi
@@ -85,6 +88,7 @@ kw rs
 ef gj
 gw kt
 om wt
+    d ()Lfl; getPlayerFileManager
 pp yj
 ms ui
 ps ym
@@ -297,6 +301,7 @@ jq pp
 mn tv
 js pv
 dj fd
+    n ()Lay; u
 jp pm
 pz yu
 ce dl

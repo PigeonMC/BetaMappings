@@ -4180,7 +4180,9 @@ s_ff net/minecraft/server/entity/EntityTrackerEntry
     n trackedPlayers
 s_fi net/minecraft/server/gui/GuiLogFormatter
     a outputHandler
-s_fl net/minecraft/server/entity/AbstractPlayerFileData
+s_fl net/minecraft/server/entity/AbstractPlayerManager
+    a (Lgs;)V writePlayer
+    b (Lgs;)V readPlayer
 s_gy net/minecraft/server/gui/StatGuiComponent
     a memoryUse
     b updates
@@ -4207,6 +4209,7 @@ s_hm net/minecraft/server/gui/StatGuiListener
 s_i net/minecraft/server/entity/PlayerListBox
     a server
     b updates
+s_ie net/minecraft/server/world/ServerSaveHandler
 s_kd net/minecraft/server/entity/PlayerHashEntry
     a key
     b value
