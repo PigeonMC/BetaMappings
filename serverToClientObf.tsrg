@@ -24,6 +24,7 @@ fi s_fi
 nl s_nl
 oh s_oh
 dl s_dl
+    o ()V o_mc
 af s_af
 ci s_ci
 ff s_ff
@@ -44,18 +45,23 @@ mb s_mb
 he s_he
 dp s_dp
     n ()Lay; u
+    m ()J t
     p ()Lom; getSaveHandler
 s s_s
 n z
 iv nz
 av bo
 pj yb
+    b (Ljava/lang/String;)V d
 of wl
 ie s_ie
 gz la
 nv vw
 po yi
 pb xp
+    c (III)I e
+    d (III)Lhj; f
+    e (III)Z h
 oi wo
 hy mp
 mj tr
@@ -76,10 +82,19 @@ ki qy
 hz mq
 pi ya
 fy iz
+    b ()I c
+    d ()Z e
+    e ()Z f
+    f ()Z g
+    g ()I h
+    h ()I i
+    i ()I j
+    j ()Lfy; k
 lw sv
 mi tq
 gn jw
 ar bk
+    g (Ldj;III)V h
 jr pt
 gv ks
 dw fs
@@ -95,6 +110,26 @@ ps ym
 da er
 je or
 em gs
+    D z
+    E A
+    F B
+    G D
+    d bO
+    i c
+    m g
+    p j
+    q k
+    r l
+    s m
+    z u
+    F ()V D
+    M ()Z O
+    a (Lfy;)V b
+    b (III)V a
+    b (Lfy;)V a
+    o ()Z am
+    s ()V E
+    w ()V J
 gs kd
 lk sg
 ex hi
@@ -111,19 +146,75 @@ dc ev
 en gw
 ik nk
 bx cy
+    a ()Z b
+    c ()V d
 eh gi
 fg hu
 ct ei
+    b (I)V e
+    c (I)V f
+    h ()I i
+    k ()I n
+    m ()I p
 gt ki
+    b ()I c
 be by
 as bl
+# Entity
 lq sn
+    aG aD
+    aH aE
+    aI aF
+    aJ aG
+    aK aH
+    aL aI
+    aM aJ
+    aN aK
+    aO aL
+    aP aM
+    aQ aN
+    aU aR
+    aV aS
+    aW aT
+    E ()V s_
+    J ()V K
+    K ()Z L
+    P ()V S
+    R ()V U
+    T ()Z W
+    Y ()V ab
+    Z ()Lba; ac
+    a (DDD)V b
+    a (F)V b
+    aa ()Lmo; ad
+    ab ()V ae
+    ad ()Z ag
+    ae ()Z ah
+    af ()V ai
+    ag ()Ljava/lang/String; aj
+    ah ()Z t
+    b (DDD)V d
+    b (Llq;)V i
+    c (DDD)V e
+    c (F)F a
+    d (DDD)Z f
+    d_ ()Z i_
+    e (DDD)D g
+    e_ ()Lcz; f
+    f ()V l_
+    f (DDD)D h
+    f_ ()Z k_
+    l_ ()Z h_
+    m_ ()V w_
+    t ()F w
 an bf
 az bs
 lx sz
 jn ph
 du fp
 cz eq
+    a ()V b
+    b ()Lcz; d
 dr fl
 pq yk
 cx eo
@@ -144,9 +235,11 @@ bb bu
 mw um
 ni vd
 bc bv
+    g (Ldj;III)V h
 aq bj
 dv fr
 kv rp
+    i (Ldj;III)V j
 cb dh
 iu oa
 og wm
@@ -168,9 +261,12 @@ dk ff
 hc le
 ht ma
 ij ni
+    h (Ldj;III)F i
 mh tp
 fa hm
 bu ct
+    a ()F b
+    b ()F c
 a a
 id mv
 ek go
@@ -180,6 +276,9 @@ pe xs
 pw ys
 pm yd
 lo sm
+    c (Lpb;IIII)Z e
+    g (Ldj;III)V h
+    h (Ldj;III)V i
 oj wp
 kh qx
 hx mo
@@ -197,6 +296,7 @@ ju pz
 aj ay
 b b
 ei gk
+    g (Ldj;III)V h
 op wx
 iq nu
 lj sf
@@ -207,7 +307,47 @@ kk rb
 jo pk
 k p
 ln sk
+    k ()Z b
+    l ()V k
+    m ()Z l
+# LivingEntity
 hl ls
+    K H
+    L I
+    R O
+    W T
+    Y V
+    Z W
+    aA ax
+    aB ay
+    aC az
+    aD aA
+    aE aB
+    aF aC
+    aa X
+    ab Y
+    ac Z
+    ad aa
+    ae ab
+    af ac
+    ag ad
+    ah ae
+    ak ah
+    az aw
+    D ()Z y
+    O ()V R
+    Q ()V T
+    S ()V V
+    W ()Llq; Z
+    a (FF)V a_
+    a (Llq;)V b
+    b (F)Lba; f
+    b (I)V c
+    b_ ()Z d_
+    c (I)V b
+    c_ ()V f_
+    h ()Ljava/lang/String; j_
+    v ()V o
 mg to
 ku rn
 ia mr
@@ -219,24 +359,50 @@ ov xf
 ks rl
 dn fi
 fp ii
+    o ()Llq; g_
 mx ur
 cm dx
 nq vo
 ai ax
 it ny
 cr eg
-go jx
+go s_go
+# go jx
+#    d (I)Ljava/lang/Object; b
+#    e (I)Log; c
+#    f (I)I d
+#    g (I)I e
+#    h (I)V f
 mz ut
 hd lf
 ej gm
+    b (I)Lej; c
+    c ()I d
+    c (I)Lej; d
+    d ()Z e
+    d (I)Lej; e
+    e ()I f
+    g ()Lej; h
+    h ()Lej; i
+    i ()Z j
 jh ow
+    g_ ()V n_
 jc om
 jt pw
 fx ix
+    b (I)Z c
+    c (I)V e
+    d (I)I f
+    f ()V e
+    g ()I f
+    h ()V g
+    j ()Lfy; i
+    k ()I j
 el gp
 ge jj
 hk lp
 ec gb
+    x ()I v
 hw mn
 gf jm
 fk ie
@@ -245,13 +411,16 @@ lm si
 cj dq
 cl dw
 oc wh
+    x ()Z v
 hq lx
+    h ()I k
 l s
 mp uf
 bk ck
 di fc
 mr uh
 px yw
+    k ()I l
 pv yr
 mm tw
 kj qz
@@ -268,7 +437,9 @@ lp sl
 jx qj
 by db
 iz oi
+    g (Ldj;III)I h
 nj ve
+    o ()V r
 ab am
 ch do
 kq rj
@@ -276,6 +447,7 @@ ny wc
 hf lh
 oe wk
 gi jq
+    f (Ldj;IIII)Z e
 db eu
 ey hk
 de ey
@@ -293,6 +465,8 @@ ft is
 bw cw
 c c
 no vl
+    g (Ldj;III)Z h
+    h (Ldj;III)Z i
 kp rh
 ih ng
 fe hq
@@ -300,11 +474,58 @@ kn rg
 jq pp
 mn tv
 js pv
+# World
 dj fd
+    a (IIII)Z b
+    a (Ljava/lang/Class;)I b
+    b (IIII)Z c
+    c (IIII)V d
+    c (Lcz;)Z b
+    d ()Z f
+    d (IIII)Z e
+    d (Lcz;)Z c
+    e ()V g
+    e (IIII)Z f
+    f (II)I e
+    f (III)Z d
+    f (IIII)V g
+    g ()V k
+    g (II)Z f
+    g (III)Z i
+    g (IIII)V h
+    g (Llq;)V f
+    h ()V l
+    h (III)V j
+    h (IIII)V i
+    i ()V m
+    i (III)V k
+    i (IIII)Z j
+    j (III)Z l
+    j (IIII)Z k
+    k ()V r
+    k (IIII)V l
+    l ()J s
+    l (III)I n
+    m ()J t
+    m (III)Z o
     n ()Lay; u
+    o ()Lbl; b
+    o (III)V p
+    q ()Lct; x
+    q (III)Z r
+    r ()V y
+    r (III)Z s
+    s ()V z
+    t ()Z A
+    u ()Z B
+    v ()Z C
+    w ()V D
 jp pm
+    a ()V e
+    a (IIIIII)V b
 pz yu
 ce dl
+    b_ (I)V e_
 dd ew
 mk ts
 qa yy
@@ -313,24 +534,33 @@ lb rw
 oq wu
 ow xg
 e e
+    g (Ldj;III)Z h
 lu ss
 if nd
 lf rz
 gx ky
 ba bt
+    a ()V b
+    a (Lba;)D c
+    b ()Lba; c
+    c ()D d
 nt vt
 fd ho
 fo ij
 gu km
 gr kb
 pt yq
+    b (Lpb;III)Z c
+    h (Ldj;III)I i
 np vm
+    h (Ldj;III)Z i
 x aj
 bt kg
 jm pg
 do fk
 mq ug
 me ti
+    a (Lgt;)V c
 ir nv
 io ns
 li se
@@ -352,17 +582,24 @@ ak az
 nd uy
 bh cd
 ko ri
+    g (Ldj;III)V h
 hi lm
+    d ()V e
+    e ()V f
+    f ()V g
 kx rt
 lr sp
 jw qd
 nz wd
 gk js
 eu he
+    b (Ldj;IIILjava/util/Random;)V c
 df fa
 pn yh
 lh sb
 hp lw
+    d_ (I)Lfy; f_
+    i ()V y_
 au bm
 le ry
 oz xl
@@ -392,13 +629,17 @@ z ak
 jd oq
 ol wr
 kg qw
+    h ()V k
 kf qv
 cc di
 er hb
 lz tc
+    g (Ldj;III)V h
 os xa
+    c ()V e
 gj jr
 pd xr
+    g (Ldj;III)Z h
 fm ig
 bi cc
 at bn
@@ -413,6 +654,8 @@ bp cq
 on ws
 fu it
 jl pf
+    f ()Z d
+    g ()Z e
 o aa
 bj cf
 ph xv
@@ -423,6 +666,8 @@ ds fn
 bd bx
 fj ic
 pa xq
+    b (Ldj;IIILjava/util/Random;)V c
+    g (Ldj;III)V h
 f g
 cs ef
 ji ox
@@ -430,10 +675,26 @@ bo cp
 ob wi
 eb fz
 na uu
+    a ()Z c
+    a (Lpb;IIII)Z c
+    a (Z)Lna; b
+    a_ (I)I b_
+    c ()I e
+    d ()Z f
+    e ()I h
+    f (I)Lna; g
+    f (Ldj;III)Z g
+    i ()Lna; l
+    j ()F m
+    k_ ()Z v_
+    l ()Ljava/lang/String; o
+    m ()Z p
+    n ()Lna; q
 nc ux
 dz fw
 fv iu
 nw wb
+    c (I)Z d
 ii nh
 bz dd
 hs lz

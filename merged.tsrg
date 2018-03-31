@@ -2798,7 +2798,7 @@ rj net/minecraft/world/RegionFileCache
     c (Ljava/io/File;II)Ljava/io/DataInputStream; getChunkInputStream
     d (Ljava/io/File;II)Ljava/io/DataOutputStream; getChunkOutputStream
 rk net/minecraft/item/SeedItem
-rl net/minecraft/MinecartItem
+rl net/minecraft/item/MinecartItem
     a type
 rm net/minecraft/network/packet/ExplosionPacket
     a x
