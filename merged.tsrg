@@ -3860,9 +3860,9 @@ xw net/minecraft/client/particle/AbstractParticle
     i red
     j green
     k blue
-    l x
-    m y
-    n z
+    l interpPosX
+    m interpPosY
+    n interpPosZ
     a (Lnw;FFFFFF)V renderParticle
     c_ ()I getParticleLayer
 xx net/minecraft/util/MinecraftError
