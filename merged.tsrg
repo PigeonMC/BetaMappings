@@ -2523,7 +2523,7 @@ pd net/minecraft/util/OS2
     f UNKNOWN2
 pe net/minecraft/network/packet/ChatPacket
     a message
-pf net/minecraft/network/NetworkManager
+pf net/minecraft/network/ClientNetworkManager
     a threadSyncObject
     b readThreadCount
     c writeThreadCount
@@ -3784,7 +3784,7 @@ xc net/minecraft/crafting/WeaponRecipes
 xd net/minecraft/client/particle/RainParticle
 xe net/minecraft/json/exception/JsonInvalidSyntaxException
 xf net/minecraft/block/SpongeBlock
-xg net/minecraft/network/NetworkMasterThread
+xg net/minecraft/network/ClientNetworkMasterThread
     a networkManager
 xh net/minecraft/util/CloseConnectionThread
 xi net/minecraft/achievement/StatFileWriter
@@ -3794,7 +3794,7 @@ xi net/minecraft/achievement/StatFileWriter
     a (Lvr;)I writeStat
     a (Lvr;I)V readStat
     c ()V syncStats
-xj net/minecraft/network/NetworkReaderThread
+xj net/minecraft/network/ClientNetworkReaderThread
     a networkManager
 xk net/minecraft/client/entity/PlayerControllerMP
     c currentBlockX
@@ -3807,7 +3807,7 @@ xk net/minecraft/client/entity/PlayerControllerMP
     k netClientHandler
     l currentPlayerItem
     e ()V syncCurrentPlayItem
-xl net/minecraft/network/NetworkWriterThread
+xl net/minecraft/network/ClientNetworkWriterThread
     a netManager
 xm net/minecraft/client/gui/AchievementsGui
 x net/minecraft/client/gui/ErrorScreenGui
@@ -4210,6 +4210,7 @@ s_i net/minecraft/server/entity/PlayerListBox
     a server
     b updates
 s_ie net/minecraft/server/world/ServerSaveHandler
+s_jl net/minecraft/network/ServerNetworkManager
 s_kd net/minecraft/server/entity/PlayerHashEntry
     a key
     b value
@@ -4240,7 +4241,12 @@ s_oo net/minecraft/server/entity/PlayerManager
     c playerInstancesToUpdate
     d server
     f playerViewRadius
+s_ow net/minecraft/network/ServerNetworkMasterThread
 s_ox net/minecraft/server/MonitorConnectionThread
+    a networkManager
+s_oy net/minecraft/network/ServerNetworkReaderThread
+    a networkManager
+s_oz net/minecraft/network/ServerNetworkWriterThread
     a networkManager
 s_pu net/minecraft/server/ItemEntityManager
     b world
