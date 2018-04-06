@@ -1410,7 +1410,7 @@ it net/minecraft/container/CraftingTableContainer
     b craftingResult
 iu net/minecraft/world/map/MapData
 iv net/minecraft/client/gui/StatSlotGui
-iw net/minecraft/network/packet/OpenWindowPacker
+iw net/minecraft/network/packet/OpenWindowPacket
     a windowId
     b inventoryType
     c windowTitle
@@ -3593,7 +3593,7 @@ vf net/minecraft/world/MovingObjectPosition
     f hitVec
     g entityHit
 vg net/minecraft/block/LogBlock
-vh net/minecraft/network/packet/PlayerRotationPacker
+vh net/minecraft/network/packet/PlayerRotationPacket
 vi net/minecraft/world/chunk/ChunkBlockMap
 vj net/minecraft/util/StatSyncherSendThread
 vk net/minecraft/util/StatSyncherReceiveThread
