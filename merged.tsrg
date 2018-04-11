@@ -2217,7 +2217,7 @@ nl net/minecraft/world/SaveFormat
     c ()V flushCache
 nm net/minecraft/network/packet/AnimationPacket
     a entityId
-    b animate
+    b animation
 n net/minecraft/client/render/GlobalRenderer
     A glSkyList2
     a tileEntities
@@ -4082,6 +4082,8 @@ net/minecraft/client/MinecraftApplet net/minecraft/client/MinecraftApplet
     c ()V clearApplet
 
 # Server Only Classes
+net/minecraft/server/MinecraftServer net/minecraft/server/MinecraftServer
+    q running
 s_af net/minecraft/server/command/ServerCommand
     a command
     b commandListener
@@ -4211,6 +4213,9 @@ s_i net/minecraft/server/entity/PlayerListBox
     b updates
 s_ie net/minecraft/server/world/ServerSaveHandler
 s_jl net/minecraft/network/ServerNetworkManager
+    a (Lki;)V addToSendQueue
+    f ()Z sendPacket
+    g ()Z readPacket
 s_kd net/minecraft/server/entity/PlayerHashEntry
     a key
     b value
