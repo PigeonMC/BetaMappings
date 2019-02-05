@@ -1,0 +1,196 @@
+# Server Only Classes
+net/minecraft/server/MinecraftServer net/minecraft/server/MinecraftServer
+    q running
+af net/minecraft/server/command/ServerCommand
+    a command
+    b commandListener
+bq net/minecraft/server/ServerApplicationThread
+    a server
+br net/minecraft/server/ConvertProgressUpdater
+    a server
+    b lastTimeMillis
+bs net/minecraft/server/command/CommandReaderThread
+    a server
+ci net/minecraft/server/gui/GuiLogOutputHandler
+cu net/minecraft/server/network/NetworkListenThread
+    a logger
+    c server
+    d serverSocket
+    e networkAcceptThread
+    g pendingConnections
+    h playerList
+cv net/minecraft/server/LoginVerifierThread
+    a loginPacket
+    b loginHandler
+dg net/minecraft/server/entity/UpdatePlayerListBox
+dl net/minecraft/server/entity/PlayerEntityMP
+    a playerNetServerHandler
+    b server
+    c itemEntityManager
+    f loadedChunks
+    bL lastHealth
+    bM ticksOfInvulnerability
+    bN playerInventory
+    bO currentWindowId
+    h isChangingQuantityOnly
+dm net/minecraft/server/world/WorldManager
+    a server
+dp net/minecraft/server/world/ServerWorld
+    C serverChunkProvider
+    E levelSaving
+    F server
+    G mcHash
+dq net/minecraft/server/entity/PlayerNBTManager
+    a logger
+    b worldDir
+    c worldFile
+dx net/minecraft/server/entity/PlayerHash
+    a hashes
+    b hashCount
+    c capacity
+    d percentUsable
+ee net/minecraft/server/network/ServerLoginHandler
+    a logger
+    b networkManager
+    c isDoneProcessing
+    d random
+    e server
+    f loginTimer
+    g username
+    h loginPacket
+    i serverId
+eg net/minecraft/server/world/WorldServerMP
+ev net/minecraft/server/gui/ConsoleLogManager
+    a logger
+fc net/minecraft/server/ServerConfigurationManager
+    a logger
+    b players
+    c server
+    d playerManager
+    e maxPlayers
+    f bannedPlayers
+    g bannedIps
+    h ops
+    i whiteListedIps
+    j bannedPlayersFile
+    k ipBanFile
+    l opFile
+    m whitelistPlayersFile
+    n playerNBTManager
+    o whiteListEnforced
+ff net/minecraft/server/entity/EntityTrackerEntry
+    a trackedEntity
+    b trackedDistanceThreshold
+    d encodedX
+    e encodedY
+    f encodedZ
+    g encodedYaw
+    h encodedPitch
+    i lastTrackedEntityMotionX
+    j lastTrackedEntityMotionY
+    k lastTrackedEntityMotionZ
+    l updates
+    o lastTrackedEntityPosX
+    p lastTrackedEntityPosY
+    q lastTrackedEntityPosZ
+    r firstUpdateDone
+    s shouldSendMotionUpdates
+    m playerEntitiesUpdated
+    n trackedPlayers
+fi net/minecraft/server/gui/GuiLogFormatter
+    a outputHandler
+fl net/minecraft/server/entity/AbstractPlayerManager
+    a (Lgs;)V writePlayer
+    b (Lgs;)V readPlayer
+gy net/minecraft/server/gui/StatGuiComponent
+    a memoryUse
+    b updates
+    c displayString
+ha net/minecraft/server/network/ServerNetHandler
+    a logger
+    b networkManager
+    c isConnectionClosed
+    d server
+    e playerEntity
+    h playerAirTime
+    j lastX
+    k lastY
+    l lastZ
+    m hasMoved
+he net/minecraft/server/world/RegionFileCache2
+    a chunkLoadOverride
+    c dummyChunk
+    d serverChunkGenerator
+    f idToChunkMap
+    h world
+hm net/minecraft/server/gui/StatGuiListener
+    a statsComponent
+i net/minecraft/server/entity/PlayerListBox
+    a server
+    b updates
+ie net/minecraft/server/world/ServerSaveHandler
+jl net/minecraft/network/ServerNetworkManager
+    a (Lki;)V addToSendQueue
+    f ()Z sendPacket
+    g ()Z readPacket
+kd net/minecraft/server/entity/PlayerHashEntry
+    a key
+    b value
+    c nextEntry
+ky net/minecraft/server/PropertyManager
+    a logger
+    b serverProperties
+    c serverPropertiesFile
+ld net/minecraft/server/network/NetworkAcceptThread
+    a server
+mb net/minecraft/server/command/CommandListener
+mc net/minecraft/server/command/ConsoleCommandHandler
+    a logger
+    b server
+nf net/minecraft/server/gui/ServerGui
+    a logger
+    b server
+nl net/minecraft/server/entity/EntityTracker
+    a trackedEntiies
+    b trackedEntitiesHashTable
+    c server
+    d maxTrackingDistanceThreshold
+oh net/minecraft/server/gui/ConsoleLogFormatter
+    a dateFormat
+oo net/minecraft/server/entity/PlayerManager
+    a players
+    b playerInstances
+    c playerInstancesToUpdate
+    d server
+    f playerViewRadius
+ow net/minecraft/network/ServerNetworkMasterThread
+ox net/minecraft/server/MonitorConnectionThread
+    a networkManager
+oy net/minecraft/network/ServerNetworkReaderThread
+    a networkManager
+oz net/minecraft/network/ServerNetworkWriterThread
+    a networkManager
+pu net/minecraft/server/ItemEntityManager
+    b world
+    a player
+q net/minecraft/server/gui/ServerWindowAdapter
+    a server
+r net/minecraft/server/gui/ServerGuiCommandListener
+    a textField
+    b serverGui
+s net/minecraft/server/gui/ServerGuiFocusAdapter
+    a serverGui
+u net/minecraft/unknown/EmptyAnimal
+y net/minecraft/server/entity/PlayerInstance
+    b players
+    c chunkX
+    d chunkZ
+    e currentChunk
+    f blocksToUpdate
+    g blocksToUpdateCount
+    h minX
+    i maxX
+    j minY
+    k maxY
+    l minZ
+    m maxZ
